@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "739464300491",
+    "project_id": "sub-tracker-1ae75",
+    "storage_bucket": "sub-tracker-1ae75.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:739464300491:android:1adf42e9833c79861cd84e",
+        "android_client_info": {
+          "package_name": "id.elharies.subtracker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJZgshjbuKTLf-KcSl9MGXIGzJ0XdKF9U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:startapp_sdk/startapp.dart';
 
@@ -6,7 +7,7 @@ class AdsService extends GetxService {
 
   Future<AdsService> init() async {
     _startAppSdk = StartAppSdk();
-    await _startAppSdk.setTestAdsEnabled(true);
+    await _startAppSdk.setTestAdsEnabled(kDebugMode);
     return this;
   }
 

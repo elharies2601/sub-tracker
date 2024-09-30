@@ -1,3 +1,7 @@
+import 'dart:ui';
+
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
@@ -11,6 +15,8 @@ import 'package:sub_tracker/theme/ThemeController.dart';
 import 'package:sub_tracker/theme/theme.dart';
 import 'package:sub_tracker/theme/theme_binding.dart';
 
+import 'firebase_options.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await GetStorage.init();
@@ -18,6 +24,17 @@ void main() async {
   await Get.putAsync(() => CategoryService().init());
   await Get.putAsync(() => PaymentService().init());
   await Get.putAsync(() => AdsService().init());
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  FlutterError.onError = (errorDetails) {
+    FirebaseCrashlytics.instance.recordFlutterFatalError(errorDetails);
+  };
+  // Pass all uncaught asynchronous errors that aren't handled by the Flutter framework to Crashlytics
+  PlatformDispatcher.instance.onError = (error, stack) {
+    FirebaseCrashlytics.instance.recordError(error, stack, fatal: true);
+    return true;
+  };
   await initializeDateFormatting('id_ID').then((_) => runApp(const MyApp()));
 }
 
