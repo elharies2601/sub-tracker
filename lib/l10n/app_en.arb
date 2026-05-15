@@ -1,0 +1,248 @@
+{
+  "@@locale": "en",
+  "appTitle": "SubTracker",
+  "navSubscriptions": "Subscriptions",
+  "navDashboard": "Dashboard",
+  "navSettings": "Settings",
+  "settingsTitle": "Settings",
+  "settingsSectionAppearance": "Appearance",
+  "settingsSectionGeneral": "General",
+  "settingsSectionNotifications": "Notifications",
+  "settingsSectionSecurity": "Security",
+  "settingsSectionAbout": "About",
+  "settingsSectionAds": "Premium Features",
+  "settingsHideAdsTitle": "Hide Ads",
+  "settingsHideAdsSubtitle": "Watch a video to be ad-free for 24 hours",
+  "settingsAdsHiddenSuccess": "Ads hidden for 24 hours!",
+  "settingsAdsLoadFailed": "Failed to load ad: {error}",
+  "@settingsAdsLoadFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsAdsDisabled": "Ads disabled",
+  "settingsThemeTitle": "Theme",
+  "settingsThemeSystem": "Follow system",
+  "settingsThemeLight": "Light",
+  "settingsThemeDark": "Dark",
+  "settingsThemePickerTitle": "Choose theme",
+  "settingsLanguageTitle": "Language",
+  "settingsLanguagePickerTitle": "Choose language",
+  "settingsCurrencyTitle": "Default currency",
+  "settingsCurrencyPickerTitle": "Choose currency",
+  "settingsNotificationsTitle": "Notifications",
+  "settingsNotificationsActive": "Reminders are active",
+  "settingsNotificationsPaused": "All reminders paused",
+  "settingsReminderTimeTitle": "Reminder time",
+  "settingsReminderTimeSubtitle": "Daily notifications at {time}",
+  "@settingsReminderTimeSubtitle": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsReminderTimeHelp": "Reminder time",
+  "settingsBiometricTitle": "Biometric lock",
+  "settingsBiometricLocked": "App locked on startup",
+  "settingsBiometricUnlocked": "No lock",
+  "settingsVersionTitle": "Version",
+  "settingsPrivacyTitle": "Privacy",
+  "settingsPrivacySubtitle": "All data stays on your device",
+  "settingsClearDataTitle": "Clear all data",
+  "settingsClearDataSubtitle": "Delete all subscriptions and history",
+  "dialogClearDataTitle": "Clear all data?",
+  "dialogClearDataContent": "This will permanently delete all your subscriptions, reminders, and payment history. App settings will remain intact. This action cannot be undone.",
+  "dialogClearDataConfirm": "Delete everything",
+  "settingsDataClearedSuccess": "All subscription data has been cleared.",
+  "actionCancel": "Cancel",
+  "actionSave": "Save",
+  "actionDelete": "Delete",
+  "actionEdit": "Edit",
+  "comingSoon": "Coming soon",
+  "subListTitle": "My subscriptions",
+  "subListAddLabel": "Add",
+  "subListMonthlySpend": "Monthly spend",
+  "subListNoBillsThisWeek": "No upcoming bills this week",
+  "subListBillsDueThisWeek": "{count} bill(s) due this week",
+  "@subListBillsDueThisWeek": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "subListEmpty": "No subscriptions yet",
+  "subListEmptyHint": "Tap + to add your first one",
+  "subDetailConfirmPayment": "Confirm payment",
+  "subDetailPer": "per {cycle}",
+  "@subDetailPer": {
+    "placeholders": {
+      "cycle": {
+        "type": "String"
+      }
+    }
+  },
+  "subDetailOverdue": "Overdue by {days} day(s)",
+  "@subDetailOverdue": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "subDetailDueToday": "Due today",
+  "subDetailDueInDays": "Due in {days} day(s)",
+  "@subDetailDueInDays": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "subDetailDueInDaysPlain": "Due in {days} days",
+  "@subDetailDueInDaysPlain": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "subDetailNotes": "Notes",
+  "subDetailPaymentHistory": "Payment history",
+  "subDetailCategory": "Category",
+  "subDetailBilling": "Billing",
+  "subDetailStarted": "Started",
+  "subDetailStatus": "Status",
+  "subDetailMonthlyCost": "Monthly cost",
+  "subDetailYearlyCost": "Yearly cost",
+  "subDetailPause": "Pause",
+  "subDetailResume": "Resume",
+  "subDetailReminders": "Reminders",
+  "subFormAddTitle": "Add subscription",
+  "subFormEditTitle": "Edit subscription",
+  "subFormNameLabel": "Name *",
+  "subFormNameRequired": "Name is required",
+  "subFormAmountLabel": "Amount *",
+  "subFormAmountRequired": "Required",
+  "subFormAmountInvalid": "Invalid number",
+  "subFormAmountPositive": "Must be > 0",
+  "subFormCurrencyLabel": "Currency",
+  "subFormCategoryLabel": "Category",
+  "subFormBillingCycleLabel": "Billing cycle",
+  "subFormBillingDayLabel": "Billing day",
+  "subFormBillingDayHelper": "Day of month (1–28) or week (1=Mon)",
+  "subFormBillingDayRange": "Enter 1–28",
+  "subFormStartDateLabel": "Start date",
+  "subFormNotesLabel": "Notes (optional)",
+  "subFormAddButton": "Add subscription",
+  "subFormSaveButton": "Save changes",
+  "cardBadgeOverdue": "Overdue",
+  "cardBadgeDueToday": "Due today",
+  "cardDeleteTitle": "Delete subscription?",
+  "cardDeleteContent": "Remove \"{name}\" permanently.",
+  "@cardDeleteContent": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "paymentNoHistory": "No payments recorded yet",
+  "paymentConfirmTitle": "Confirm payment",
+  "paymentAmountPaid": "Amount paid",
+  "paymentNotesLabel": "Notes (optional)",
+  "paymentNotesHint": "e.g. Paid via credit card",
+  "paymentSaving": "Saving…",
+  "paymentConfirmButton": "Confirm payment",
+  "dashboardTitle": "Dashboard",
+  "dashboardMonthlySpend": "Monthly spend",
+  "dashboardPerYear": "{amount} / year",
+  "@dashboardPerYear": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "dashboardStatActive": "Active",
+  "dashboardStatPaused": "Paused",
+  "dashboardStatCategories": "Categories",
+  "dashboardStatSubscriptions": "subscriptions",
+  "dashboardSpendingByCategory": "Spending by category",
+  "dashboardMonthlyBreakdown": "Monthly breakdown",
+  "dashboardMonthlyTrend": "Monthly trend",
+  "dashboardLast6Months": "Last 6 months",
+  "dashboardUpcomingThisWeek": "Upcoming this week",
+  "dashboardNext7Days": "Next 7 days",
+  "dashboardNoBillsNext7Days": "No bills due in the next 7 days",
+  "dashboardBadgeToday": "Today",
+  "dashboardBadgeTomorrow": "Tomorrow",
+  "dashboardBadgeDays": "{days} days",
+  "@dashboardBadgeDays": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "dashboardEmpty": "No data yet",
+  "dashboardEmptyHint": "Add subscriptions to see your spending overview",
+  "reminderAppBarTitle": "Reminders – {name}",
+  "@reminderAppBarTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "reminderNotifyBefore": "Notify me before due date",
+  "reminderRemindAt": "Remind me at",
+  "reminderTapToChange": "Tap to change",
+  "reminderSelectTime": "Select reminder time",
+  "reminderSaveAtLeastOne": "Select at least one reminder",
+  "reminderSaved": "Reminders saved",
+  "reminderDisableAll": "Disable all reminders",
+  "reminderAllDisabled": "All reminders disabled",
+  "reminderInfoText": "Reminders are scheduled locally on your device. They will be rescheduled automatically each time you open the app.",
+  "reminder7DaysBefore": "7 days before",
+  "reminder7DaysSubtitle": "One week ahead",
+  "reminder3DaysBefore": "3 days before",
+  "reminder3DaysSubtitle": "A few days to prepare",
+  "reminder1DayBefore": "1 day before",
+  "reminder1DaySubtitle": "Final reminder",
+  "reminderOnTheDay": "On the day",
+  "reminderOnTheDaySubtitle": "When payment is due",
+  "skip": "Skip",
+  "onboardingWelcomeSubtitle": "Track all your subscriptions in one place. Never miss a payment again.",
+  "onboardingWelcomeButton": "Get started",
+  "onboardingFeaturesTitle": "Everything you need",
+  "onboardingFeaturesSubtitle": "Simple, focused, and private.",
+  "onboardingFeature1Title": "Track subscriptions",
+  "onboardingFeature1Desc": "Add all your subscriptions with billing cycle and amount.",
+  "onboardingFeature2Title": "Smart reminders",
+  "onboardingFeature2Desc": "Get notified 7, 3, or 1 day before each payment is due.",
+  "onboardingFeature3Title": "Spending overview",
+  "onboardingFeature3Desc": "See how much you spend monthly per category.",
+  "onboardingFeature4Title": "Fully offline",
+  "onboardingFeature4Desc": "All your data stays on your device. No account needed.",
+  "onboardingSetupTitle": "Quick setup",
+  "onboardingSetupSubtitle": "You can always change these in Settings.",
+  "onboardingSetupReminderTime": "Daily reminder time",
+  "onboardingDoneTitle": "You're all set!",
+  "onboardingDoneSubtitle": "Start adding your subscriptions and\nSubTracker will handle the rest.",
+  "onboardingDoneButton": "Add your first subscription",
+  "actionConfirm": "Confirm",
+  "noBillsOnThisDay": "No bills on this day",
+  "totalThisMonth": "Total this month: {total}",
+  "@totalThisMonth": {
+    "placeholders": {
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "statusPaid": "Paid"
+}

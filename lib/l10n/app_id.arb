@@ -1,0 +1,248 @@
+{
+  "@@locale": "id",
+  "appTitle": "SubTracker",
+  "navSubscriptions": "Langganan",
+  "navDashboard": "Dasbor",
+  "navSettings": "Pengaturan",
+  "settingsTitle": "Pengaturan",
+  "settingsSectionAppearance": "Tampilan",
+  "settingsSectionGeneral": "Umum",
+  "settingsSectionNotifications": "Notifikasi",
+  "settingsSectionSecurity": "Keamanan",
+  "settingsSectionAbout": "Tentang",
+  "settingsSectionAds": "Fitur Premium",
+  "settingsHideAdsTitle": "Hilangkan Iklan",
+  "settingsHideAdsSubtitle": "Tonton video untuk bebas iklan 24 jam",
+  "settingsAdsHiddenSuccess": "Iklan disembunyikan selama 24 jam!",
+  "settingsAdsLoadFailed": "Gagal memuat iklan: {error}",
+  "@settingsAdsLoadFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsAdsDisabled": "Iklan nonaktif",
+  "settingsThemeTitle": "Tema",
+  "settingsThemeSystem": "Ikuti sistem",
+  "settingsThemeLight": "Terang",
+  "settingsThemeDark": "Gelap",
+  "settingsThemePickerTitle": "Pilih tema",
+  "settingsLanguageTitle": "Bahasa",
+  "settingsLanguagePickerTitle": "Pilih bahasa",
+  "settingsCurrencyTitle": "Mata uang default",
+  "settingsCurrencyPickerTitle": "Pilih mata uang",
+  "settingsNotificationsTitle": "Notifikasi",
+  "settingsNotificationsActive": "Pengingat aktif",
+  "settingsNotificationsPaused": "Semua pengingat dijeda",
+  "settingsReminderTimeTitle": "Waktu pengingat",
+  "settingsReminderTimeSubtitle": "Notifikasi harian pukul {time}",
+  "@settingsReminderTimeSubtitle": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsReminderTimeHelp": "Waktu pengingat",
+  "settingsBiometricTitle": "Kunci biometrik",
+  "settingsBiometricLocked": "Aplikasi dikunci saat dibuka",
+  "settingsBiometricUnlocked": "Tidak ada kunci",
+  "settingsVersionTitle": "Versi",
+  "settingsPrivacyTitle": "Privasi",
+  "settingsPrivacySubtitle": "Semua data tersimpan di perangkat Anda",
+  "settingsClearDataTitle": "Hapus semua data",
+  "settingsClearDataSubtitle": "Hapus semua langganan dan riwayat",
+  "dialogClearDataTitle": "Hapus semua data?",
+  "dialogClearDataContent": "Ini akan menghapus secara permanen semua langganan, pengingat, dan riwayat pembayaran Anda. Pengaturan aplikasi tidak dihapus. Tindakan ini tidak dapat dibatalkan.",
+  "dialogClearDataConfirm": "Hapus semuanya",
+  "settingsDataClearedSuccess": "Semua data langganan berhasil dihapus.",
+  "actionCancel": "Batal",
+  "actionSave": "Simpan",
+  "actionDelete": "Hapus",
+  "actionEdit": "Edit",
+  "comingSoon": "Segera hadir",
+  "subListTitle": "My Subscriptions",
+  "subListAddLabel": "Tambah",
+  "subListMonthlySpend": "Pengeluaran bulanan",
+  "subListNoBillsThisWeek": "Tidak ada tagihan minggu ini",
+  "subListBillsDueThisWeek": "{count} tagihan jatuh tempo minggu ini",
+  "@subListBillsDueThisWeek": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "subListEmpty": "Belum ada langganan",
+  "subListEmptyHint": "Ketuk + untuk menambahkan yang pertama",
+  "subDetailConfirmPayment": "Konfirmasi pembayaran",
+  "subDetailPer": "per {cycle}",
+  "@subDetailPer": {
+    "placeholders": {
+      "cycle": {
+        "type": "String"
+      }
+    }
+  },
+  "subDetailOverdue": "Terlambat {days} hari",
+  "@subDetailOverdue": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "subDetailDueToday": "Jatuh tempo hari ini",
+  "subDetailDueInDays": "Jatuh tempo dalam {days} hari",
+  "@subDetailDueInDays": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "subDetailDueInDaysPlain": "Jatuh tempo dalam {days} hari",
+  "@subDetailDueInDaysPlain": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "subDetailNotes": "Catatan",
+  "subDetailPaymentHistory": "Riwayat pembayaran",
+  "subDetailCategory": "Kategori",
+  "subDetailBilling": "Penagihan",
+  "subDetailStarted": "Dimulai",
+  "subDetailStatus": "Status",
+  "subDetailMonthlyCost": "Biaya bulanan",
+  "subDetailYearlyCost": "Biaya tahunan",
+  "subDetailPause": "Jeda",
+  "subDetailResume": "Lanjutkan",
+  "subDetailReminders": "Pengingat",
+  "subFormAddTitle": "Tambah langganan",
+  "subFormEditTitle": "Edit langganan",
+  "subFormNameLabel": "Nama *",
+  "subFormNameRequired": "Nama wajib diisi",
+  "subFormAmountLabel": "Jumlah *",
+  "subFormAmountRequired": "Wajib diisi",
+  "subFormAmountInvalid": "Angka tidak valid",
+  "subFormAmountPositive": "Harus > 0",
+  "subFormCurrencyLabel": "Mata uang",
+  "subFormCategoryLabel": "Kategori",
+  "subFormBillingCycleLabel": "Siklus penagihan",
+  "subFormBillingDayLabel": "Hari penagihan",
+  "subFormBillingDayHelper": "Hari dalam bulan (1–28) atau minggu (1=Sen)",
+  "subFormBillingDayRange": "Masukkan 1–28",
+  "subFormStartDateLabel": "Tanggal mulai",
+  "subFormNotesLabel": "Catatan (opsional)",
+  "subFormAddButton": "Tambah langganan",
+  "subFormSaveButton": "Simpan perubahan",
+  "cardBadgeOverdue": "Terlambat",
+  "cardBadgeDueToday": "Jatuh tempo hari ini",
+  "cardDeleteTitle": "Hapus langganan?",
+  "cardDeleteContent": "Hapus \"{name}\" secara permanen.",
+  "@cardDeleteContent": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "paymentNoHistory": "Belum ada pembayaran tercatat",
+  "paymentConfirmTitle": "Konfirmasi pembayaran",
+  "paymentAmountPaid": "Jumlah dibayar",
+  "paymentNotesLabel": "Catatan (opsional)",
+  "paymentNotesHint": "mis. Dibayar via kartu kredit",
+  "paymentSaving": "Menyimpan…",
+  "paymentConfirmButton": "Konfirmasi pembayaran",
+  "dashboardTitle": "Dasbor",
+  "dashboardMonthlySpend": "Pengeluaran bulanan",
+  "dashboardPerYear": "{amount} / tahun",
+  "@dashboardPerYear": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "dashboardStatActive": "Aktif",
+  "dashboardStatPaused": "Dijeda",
+  "dashboardStatCategories": "Kategori",
+  "dashboardStatSubscriptions": "langganan",
+  "dashboardSpendingByCategory": "Pengeluaran per kategori",
+  "dashboardMonthlyBreakdown": "Rincian bulanan",
+  "dashboardMonthlyTrend": "Tren bulanan",
+  "dashboardLast6Months": "6 bulan terakhir",
+  "dashboardUpcomingThisWeek": "Tagihan minggu ini",
+  "dashboardNext7Days": "7 hari ke depan",
+  "dashboardNoBillsNext7Days": "Tidak ada tagihan dalam 7 hari ke depan",
+  "dashboardBadgeToday": "Hari ini",
+  "dashboardBadgeTomorrow": "Besok",
+  "dashboardBadgeDays": "{days} hari",
+  "@dashboardBadgeDays": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "dashboardEmpty": "Belum ada data",
+  "dashboardEmptyHint": "Tambahkan langganan untuk melihat ringkasan pengeluaran",
+  "reminderAppBarTitle": "Pengingat – {name}",
+  "@reminderAppBarTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "reminderNotifyBefore": "Ingatkan sebelum jatuh tempo",
+  "reminderRemindAt": "Ingatkan pukul",
+  "reminderTapToChange": "Ketuk untuk mengubah",
+  "reminderSelectTime": "Pilih waktu pengingat",
+  "reminderSaveAtLeastOne": "Pilih minimal satu pengingat",
+  "reminderSaved": "Pengingat disimpan",
+  "reminderDisableAll": "Nonaktifkan semua pengingat",
+  "reminderAllDisabled": "Semua pengingat dinonaktifkan",
+  "reminderInfoText": "Pengingat dijadwalkan secara lokal di perangkat Anda. Akan dijadwal ulang otomatis setiap kali Anda membuka aplikasi.",
+  "reminder7DaysBefore": "7 hari sebelumnya",
+  "reminder7DaysSubtitle": "Satu minggu lebih awal",
+  "reminder3DaysBefore": "3 hari sebelumnya",
+  "reminder3DaysSubtitle": "Beberapa hari untuk persiapan",
+  "reminder1DayBefore": "1 hari sebelumnya",
+  "reminder1DaySubtitle": "Pengingat terakhir",
+  "reminderOnTheDay": "Di hari yang sama",
+  "reminderOnTheDaySubtitle": "Saat pembayaran jatuh tempo",
+  "skip": "Lewati",
+  "onboardingWelcomeSubtitle": "Lacak semua langganan Anda di satu tempat. Jangan pernah lewatkan pembayaran lagi.",
+  "onboardingWelcomeButton": "Mulai",
+  "onboardingFeaturesTitle": "Semua yang Anda butuhkan",
+  "onboardingFeaturesSubtitle": "Sederhana, fokus, dan privat.",
+  "onboardingFeature1Title": "Lacak langganan",
+  "onboardingFeature1Desc": "Tambahkan semua langganan Anda beserta siklus penagihan dan jumlahnya.",
+  "onboardingFeature2Title": "Pengingat pintar",
+  "onboardingFeature2Desc": "Dapatkan notifikasi 7, 3, atau 1 hari sebelum setiap pembayaran jatuh tempo.",
+  "onboardingFeature3Title": "Ringkasan pengeluaran",
+  "onboardingFeature3Desc": "Lihat berapa banyak yang Anda habiskan setiap bulan per kategori.",
+  "onboardingFeature4Title": "Sepenuhnya offline",
+  "onboardingFeature4Desc": "Semua data Anda tetap di perangkat Anda. Tidak perlu akun.",
+  "onboardingSetupTitle": "Pengaturan cepat",
+  "onboardingSetupSubtitle": "Anda selalu dapat mengubah ini di Pengaturan.",
+  "onboardingSetupReminderTime": "Waktu pengingat harian",
+  "onboardingDoneTitle": "Semuanya siap!",
+  "onboardingDoneSubtitle": "Mulai tambahkan langganan Anda dan\nSubTracker akan menangani sisanya.",
+  "onboardingDoneButton": "Tambah langganan pertama Anda",
+  "actionConfirm": "Konfirmasi",
+  "noBillsOnThisDay": "Tidak ada tagihan pada hari ini",
+  "totalThisMonth": "Total bulan ini: {total}",
+  "@totalThisMonth": {
+    "placeholders": {
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "statusPaid": "Lunas"
+}
