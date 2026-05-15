@@ -12,8 +12,8 @@ class AppAuthNotifier extends _$AppAuthNotifier {
     // We use read instead of watch because we only want the initial state on startup.
     // However, actually `watch` is fine here, but if the setting changes, it would trigger a rebuild.
     // Let's use `watch` to initially load the value, but we only lock on start if it's true.
-    final settingsAsync = ref.watch(appSettingsNotifierProvider);
-    return settingsAsync.valueOrNull?.biometricLock ?? false;
+    final settingsAsync = ref.watch(appSettingsProvider);
+    return settingsAsync.asData?.value.biometricLock ?? false;
   }
 
   void unlock() {
@@ -22,8 +22,8 @@ class AppAuthNotifier extends _$AppAuthNotifier {
 
   void lock() {
     // Only lock if the setting is currently enabled
-    final settingsAsync = ref.read(appSettingsNotifierProvider);
-    if (settingsAsync.valueOrNull?.biometricLock == true) {
+    final settingsAsync = ref.read(appSettingsProvider);
+    if (settingsAsync.asData?.value.biometricLock == true) {
       state = true;
     }
   }

@@ -124,7 +124,7 @@ class AppSettingsNotifier extends _$AppSettingsNotifier {
   // ── Core update helper ─────────────────────────────────────────
 
   Future<void> _update(AppSettings Function(AppSettings) transform) async {
-    final current = state.valueOrNull;
+    final current = state.asData?.value;
     if (current == null) return;
 
     final updated = transform(current);
@@ -138,7 +138,7 @@ class AppSettingsNotifier extends _$AppSettingsNotifier {
   }
 
   Future<void> _rescheduleAll() async {
-    final settings = state.valueOrNull;
+    final settings = state.asData?.value;
     if (settings == null || !settings.notificationsEnabled) return;
 
     final repo = ref.read(subscriptionRepositoryProvider);
@@ -161,24 +161,24 @@ class AppSettingsNotifier extends _$AppSettingsNotifier {
 @riverpod
 ThemeMode appThemeMode(Ref ref) {
   return ref
-      .watch(appSettingsNotifierProvider)
-      .maybeWhen(data: (s) => s.themeMode, orElse: () => ThemeMode.system);
+      .watch(appSettingsProvider)
+      .asData?.value.themeMode ?? ThemeMode.system;
 }
 
 /// Current default currency — used by form pages as initial value.
 @riverpod
 String defaultCurrency(Ref ref) {
   return ref
-      .watch(appSettingsNotifierProvider)
-      .maybeWhen(data: (s) => s.defaultCurrency, orElse: () => 'IDR');
+      .watch(appSettingsProvider)
+      .asData?.value.defaultCurrency ?? 'IDR';
 }
 
 /// Current Locale — watched by MaterialApp.router to react to language changes.
 @riverpod
 Locale appLocale(Ref ref) {
   final lang = ref
-      .watch(appSettingsNotifierProvider)
-      .maybeWhen(data: (s) => s.language, orElse: () => 'id');
+      .watch(appSettingsProvider)
+      .asData?.value.language ?? 'id';
   return Locale(lang);
 }
 
@@ -186,12 +186,8 @@ Locale appLocale(Ref ref) {
 @riverpod
 bool onboardingCompleted(Ref ref) {
   return ref
-      .watch(appSettingsNotifierProvider)
-      .maybeWhen(
-        data: (s) => s.onboardingCompleted,
-        orElse: () =>
-            true, // default true so router doesn't redirect while loading
-      );
+      .watch(appSettingsProvider)
+      .asData?.value.onboardingCompleted ?? true;
 }
 
 /// Checks if device supports biometric authentication

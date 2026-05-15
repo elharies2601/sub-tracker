@@ -7,8 +7,9 @@ part 'ads_provider.g.dart';
 
 @riverpod
 bool shouldShowAds(Ref ref) {
-  final settings = ref.watch(appSettingsNotifierProvider).valueOrNull;
-  if (settings == null) return true; // Show ads by default if settings not loaded
+  final settings = ref.watch(appSettingsProvider).asData?.value;
+  if (settings == null)
+    return true; // Show ads by default if settings not loaded
 
   final adsHiddenUntil = settings.adsHiddenUntil;
   if (adsHiddenUntil == null) return true;

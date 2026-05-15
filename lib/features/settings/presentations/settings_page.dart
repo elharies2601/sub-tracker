@@ -15,9 +15,9 @@ class SettingsPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final settingsAsync = ref.watch(appSettingsNotifierProvider);
+    final settingsAsync = ref.watch(appSettingsProvider);
     final isBiometricSupported =
-        ref.watch(biometricSupportProvider).valueOrNull ?? false;
+        ref.watch(biometricSupportProvider).asData?.value ?? false;
     final l10n = AppLocalizations.of(context)!;
 
     return Scaffold(
@@ -230,7 +230,7 @@ class _ThemeTile extends ConsumerWidget {
             selected: current == theme,
             onTap: () {
               Navigator.of(sheetCtx).pop();
-              ref.read(appSettingsNotifierProvider.notifier).setTheme(theme);
+              ref.read(appSettingsProvider.notifier).setTheme(theme);
             },
           );
         }).toList(),
@@ -276,7 +276,7 @@ class _LanguageTile extends ConsumerWidget {
             selected: current == code,
             onTap: () {
               Navigator.of(sheetCtx).pop();
-              ref.read(appSettingsNotifierProvider.notifier).setLanguage(code);
+              ref.read(appSettingsProvider.notifier).setLanguage(code);
             },
           );
         }).toList(),
@@ -321,7 +321,7 @@ class _CurrencyTile extends ConsumerWidget {
             selected: current == c,
             onTap: () {
               ref
-                  .read(appSettingsNotifierProvider.notifier)
+                  .read(appSettingsProvider.notifier)
                   .setDefaultCurrency(c);
               Navigator.of(sheetCtx).pop();
             },
@@ -355,7 +355,7 @@ class _NotificationToggleTile extends ConsumerWidget {
       trailing: Switch.adaptive(
         value: enabled,
         onChanged: (v) => ref
-            .read(appSettingsNotifierProvider.notifier)
+            .read(appSettingsProvider.notifier)
             .setNotificationsEnabled(v),
       ),
     );
@@ -388,7 +388,7 @@ class _ReminderTimeTile extends ConsumerWidget {
         );
         if (picked != null) {
           await ref
-              .read(appSettingsNotifierProvider.notifier)
+              .read(appSettingsProvider.notifier)
               .setReminderTime(picked);
         }
       },
@@ -425,7 +425,7 @@ class _BiometricTile extends ConsumerWidget {
             );
             if (didAuthenticate) {
               ref
-                  .read(appSettingsNotifierProvider.notifier)
+                  .read(appSettingsProvider.notifier)
                   .setBiometricLock(v);
             }
           } catch (e) {
@@ -505,7 +505,7 @@ class _AboutTiles extends ConsumerWidget {
             onPressed: () async {
               Navigator.pop(_dialogCtx);
               await ref
-                  .read(appSettingsNotifierProvider.notifier)
+                  .read(appSettingsProvider.notifier)
                   .clearAllData();
               if (context.mounted) {
                 ScaffoldMessenger.of(context).showSnackBar(
@@ -545,7 +545,7 @@ class _AdsTileState extends ConsumerState<_AdsTile> {
       final isWatched = await rewardedAd.show();
       if (isWatched) {
         await ref
-            .read(appSettingsNotifierProvider.notifier)
+            .read(appSettingsProvider.notifier)
             .hideAdsFor24Hours();
         if (mounted) {
           ScaffoldMessenger.of(context).showSnackBar(
@@ -572,7 +572,7 @@ class _AdsTileState extends ConsumerState<_AdsTile> {
     final showAds = ref.watch(shouldShowAdsProvider);
 
     if (!showAds) {
-      final settings = ref.watch(appSettingsNotifierProvider).valueOrNull;
+      final settings = ref.watch(appSettingsProvider).asData?.value;
       final expiry = settings?.adsHiddenUntil;
       String remaining = '';
       if (expiry != null) {

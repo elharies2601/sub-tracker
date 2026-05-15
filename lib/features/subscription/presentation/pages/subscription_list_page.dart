@@ -23,7 +23,7 @@ class SubscriptionListPage extends ConsumerWidget {
     final showAds = ref.watch(shouldShowAdsProvider);
 
     // Listen to notifier errors and show SnackBar
-    ref.listen<AsyncValue<void>>(subscriptionNotifierProvider, (_, next) {
+    ref.listen<AsyncValue<void>>(subscriptionProvider, (_, next) {
       if (next is AsyncError) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
@@ -74,10 +74,10 @@ class SubscriptionListPage extends ConsumerWidget {
                       onTap: () => context.push('/subscriptions/${sub.id}'),
                       onDelete: () => {
                         ref
-                            .read(paymentHistoryNotifierProvider.notifier)
+                            .read(paymentHistoryProvider.notifier)
                             .deletePayment(subscriptionId: sub.id),
                         ref
-                            .read(subscriptionNotifierProvider.notifier)
+                            .read(subscriptionProvider.notifier)
                             .delete(sub.id),
                       },
                       onEdit: () => context.push('/subs/edit', extra: sub),

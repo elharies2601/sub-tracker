@@ -7,7 +7,7 @@ part 'reminder.freezed.dart';
 /// The actual notification is scheduled by [NotificationScheduler]
 /// using these settings.
 @freezed
-class Reminder with _$Reminder {
+abstract class Reminder with _$Reminder {
   const factory Reminder({
     required int id,
     required int subscriptionId,

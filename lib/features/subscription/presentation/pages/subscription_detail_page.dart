@@ -418,7 +418,7 @@ class _ActionsRow extends ConsumerWidget {
                   ? SubscriptionStatus.paused
                   : SubscriptionStatus.active;
               ref
-                  .read(subscriptionNotifierProvider.notifier)
+                  .read(subscriptionProvider.notifier)
                   .update(s.copyWith(status: newStatus));
             },
             style: OutlinedButton.styleFrom(

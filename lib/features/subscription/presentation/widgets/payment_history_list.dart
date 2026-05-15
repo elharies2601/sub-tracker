@@ -257,7 +257,7 @@ class _ConfirmPaymentSheetState extends ConsumerState<ConfirmPaymentSheet> {
 
   Future<void> _confirm(BuildContext sheetCtx) async {
     final success = await ref
-        .read(paymentHistoryNotifierProvider.notifier)
+        .read(paymentHistoryProvider.notifier)
         .recordPayment(
           widget.subscriptionId,
           notes: _notesCtrl.text.trim().isEmpty ? null : _notesCtrl.text.trim(),
@@ -280,7 +280,7 @@ class _ConfirmPaymentSheetState extends ConsumerState<ConfirmPaymentSheet> {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final l10n = AppLocalizations.of(context)!;
-    final isLoading = ref.watch(paymentHistoryNotifierProvider).isLoading;
+    final isLoading = ref.watch(paymentHistoryProvider).isLoading;
 
     return Padding(
       // Push sheet up above keyboard

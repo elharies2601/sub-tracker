@@ -65,7 +65,7 @@ class _ReminderSettingsPageState extends ConsumerState<ReminderSettingsPage> {
     }
 
     await ref
-        .read(reminderNotifierProvider.notifier)
+        .read(reminderProvider.notifier)
         .saveReminders(
           subscriptionId: widget.subscriptionId,
           daysBefore: _selectedDays.toList(),
@@ -73,7 +73,7 @@ class _ReminderSettingsPageState extends ConsumerState<ReminderSettingsPage> {
         );
 
     if (mounted) {
-      final state = ref.read(reminderNotifierProvider);
+      final state = ref.read(reminderProvider);
       if (state is AsyncData) {
         ScaffoldMessenger.of(
           context,
@@ -86,7 +86,7 @@ class _ReminderSettingsPageState extends ConsumerState<ReminderSettingsPage> {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
-    final isLoading = ref.watch(reminderNotifierProvider).isLoading;
+    final isLoading = ref.watch(reminderProvider).isLoading;
     final theme = Theme.of(context);
 
     // Build offset options using localized strings
@@ -210,7 +210,7 @@ class _ReminderSettingsPageState extends ConsumerState<ReminderSettingsPage> {
             onPressed: () async {
               setState(() => _selectedDays.clear());
               await ref
-                  .read(reminderNotifierProvider.notifier)
+                  .read(reminderProvider.notifier)
                   .cancelForSubscription(widget.subscriptionId);
               if (mounted) {
                 ScaffoldMessenger.of(context).showSnackBar(

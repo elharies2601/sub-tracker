@@ -48,7 +48,7 @@ class _OnboardingPageState extends ConsumerState<OnboardingPage> {
 
   Future<void> _finish() async {
     await ref
-        .read(appSettingsNotifierProvider.notifier)
+        .read(appSettingsProvider.notifier)
         .completeOnboarding(
           currency: _currency,
           language: _language,

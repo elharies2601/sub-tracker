@@ -6,252 +6,338 @@ part of 'calendar_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
+
+@ProviderFor(getCalendarEvents)
+const getCalendarEventsProvider = GetCalendarEventsProvider._();
+
+final class GetCalendarEventsProvider
+    extends
+        $FunctionalProvider<
+          GetCalendarEvents,
+          GetCalendarEvents,
+          GetCalendarEvents
+        >
+    with $Provider<GetCalendarEvents> {
+  const GetCalendarEventsProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'getCalendarEventsProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$getCalendarEventsHash();
+
+  @$internal
+  @override
+  $ProviderElement<GetCalendarEvents> $createElement(
+    $ProviderPointer pointer,
+  ) => $ProviderElement(pointer);
+
+  @override
+  GetCalendarEvents create(Ref ref) {
+    return getCalendarEvents(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(GetCalendarEvents value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<GetCalendarEvents>(value),
+    );
+  }
+}
+
 String _$getCalendarEventsHash() => r'211b67fac5c1c834bd9fd47f3143e1ccfdb3e92e';
 
-/// See also [getCalendarEvents].
-@ProviderFor(getCalendarEvents)
-final getCalendarEventsProvider =
-    AutoDisposeProvider<GetCalendarEvents>.internal(
-  getCalendarEvents,
-  name: r'getCalendarEventsProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$getCalendarEventsHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+@ProviderFor(CalendarFocusedMonth)
+const calendarFocusedMonthProvider = CalendarFocusedMonthProvider._();
 
-typedef GetCalendarEventsRef = AutoDisposeProviderRef<GetCalendarEvents>;
+final class CalendarFocusedMonthProvider
+    extends $NotifierProvider<CalendarFocusedMonth, DateTime> {
+  const CalendarFocusedMonthProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'calendarFocusedMonthProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$calendarFocusedMonthHash();
+
+  @$internal
+  @override
+  CalendarFocusedMonth create() => CalendarFocusedMonth();
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(DateTime value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<DateTime>(value),
+    );
+  }
+}
+
+String _$calendarFocusedMonthHash() =>
+    r'2ac1471443b26532540141ff18602ede7c47c9bf';
+
+abstract class _$CalendarFocusedMonth extends $Notifier<DateTime> {
+  DateTime build();
+  @$mustCallSuper
+  @override
+  void runBuild() {
+    final created = build();
+    final ref = this.ref as $Ref<DateTime, DateTime>;
+    final element =
+        ref.element
+            as $ClassProviderElement<
+              AnyNotifier<DateTime, DateTime>,
+              DateTime,
+              Object?,
+              Object?
+            >;
+    element.handleValue(ref, created);
+  }
+}
+
+@ProviderFor(calendarPaidDates)
+const calendarPaidDatesProvider = CalendarPaidDatesProvider._();
+
+final class CalendarPaidDatesProvider
+    extends
+        $FunctionalProvider<
+          AsyncValue<Set<String>>,
+          Set<String>,
+          FutureOr<Set<String>>
+        >
+    with $FutureModifier<Set<String>>, $FutureProvider<Set<String>> {
+  const CalendarPaidDatesProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'calendarPaidDatesProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$calendarPaidDatesHash();
+
+  @$internal
+  @override
+  $FutureProviderElement<Set<String>> $createElement(
+    $ProviderPointer pointer,
+  ) => $FutureProviderElement(pointer);
+
+  @override
+  FutureOr<Set<String>> create(Ref ref) {
+    return calendarPaidDates(ref);
+  }
+}
+
 String _$calendarPaidDatesHash() => r'5d406c5ac0d9158463637a2a6aadeb070c6026b0';
 
-/// See also [calendarPaidDates].
-@ProviderFor(calendarPaidDates)
-final calendarPaidDatesProvider =
-    AutoDisposeFutureProvider<Set<String>>.internal(
-  calendarPaidDates,
-  name: r'calendarPaidDatesProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$calendarPaidDatesHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
-
-typedef CalendarPaidDatesRef = AutoDisposeFutureProviderRef<Set<String>>;
-String _$calendarEventsHash() => r'fdf9888e5e3c00a4620d486e2dcd1079cf61de1d';
-
-/// See also [calendarEvents].
 @ProviderFor(calendarEvents)
-final calendarEventsProvider =
-    AutoDisposeProvider<Map<DateTime, List<CalendarEvent>>>.internal(
-  calendarEvents,
-  name: r'calendarEventsProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$calendarEventsHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+const calendarEventsProvider = CalendarEventsProvider._();
 
-typedef CalendarEventsRef
-    = AutoDisposeProviderRef<Map<DateTime, List<CalendarEvent>>>;
-String _$eventsForDayHash() => r'ec77444042851c4d8e3a7fdbd7aa8c5d713fd570';
-
-/// Copied from Dart SDK
-class _SystemHash {
-  _SystemHash._();
-
-  static int combine(int hash, int value) {
-    // ignore: parameter_assignments
-    hash = 0x1fffffff & (hash + value);
-    // ignore: parameter_assignments
-    hash = 0x1fffffff & (hash + ((0x0007ffff & hash) << 10));
-    return hash ^ (hash >> 6);
-  }
-
-  static int finish(int hash) {
-    // ignore: parameter_assignments
-    hash = 0x1fffffff & (hash + ((0x03ffffff & hash) << 3));
-    // ignore: parameter_assignments
-    hash = hash ^ (hash >> 11);
-    return 0x1fffffff & (hash + ((0x00003fff & hash) << 15));
-  }
-}
-
-/// Events for a specific selected day (used by day detail panel).
-///
-/// Copied from [eventsForDay].
-@ProviderFor(eventsForDay)
-const eventsForDayProvider = EventsForDayFamily();
-
-/// Events for a specific selected day (used by day detail panel).
-///
-/// Copied from [eventsForDay].
-class EventsForDayFamily extends Family<List<CalendarEvent>> {
-  /// Events for a specific selected day (used by day detail panel).
-  ///
-  /// Copied from [eventsForDay].
-  const EventsForDayFamily();
-
-  /// Events for a specific selected day (used by day detail panel).
-  ///
-  /// Copied from [eventsForDay].
-  EventsForDayProvider call(
-    DateTime day,
-  ) {
-    return EventsForDayProvider(
-      day,
-    );
-  }
-
-  @override
-  EventsForDayProvider getProviderOverride(
-    covariant EventsForDayProvider provider,
-  ) {
-    return call(
-      provider.day,
-    );
-  }
-
-  static const Iterable<ProviderOrFamily>? _dependencies = null;
-
-  @override
-  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
-
-  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
-
-  @override
-  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
-      _allTransitiveDependencies;
-
-  @override
-  String? get name => r'eventsForDayProvider';
-}
-
-/// Events for a specific selected day (used by day detail panel).
-///
-/// Copied from [eventsForDay].
-class EventsForDayProvider extends AutoDisposeProvider<List<CalendarEvent>> {
-  /// Events for a specific selected day (used by day detail panel).
-  ///
-  /// Copied from [eventsForDay].
-  EventsForDayProvider(
-    DateTime day,
-  ) : this._internal(
-          (ref) => eventsForDay(
-            ref as EventsForDayRef,
-            day,
-          ),
-          from: eventsForDayProvider,
-          name: r'eventsForDayProvider',
-          debugGetCreateSourceHash:
-              const bool.fromEnvironment('dart.vm.product')
-                  ? null
-                  : _$eventsForDayHash,
-          dependencies: EventsForDayFamily._dependencies,
-          allTransitiveDependencies:
-              EventsForDayFamily._allTransitiveDependencies,
-          day: day,
-        );
-
-  EventsForDayProvider._internal(
-    super._createNotifier, {
-    required super.name,
-    required super.dependencies,
-    required super.allTransitiveDependencies,
-    required super.debugGetCreateSourceHash,
-    required super.from,
-    required this.day,
-  }) : super.internal();
-
-  final DateTime day;
-
-  @override
-  Override overrideWith(
-    List<CalendarEvent> Function(EventsForDayRef provider) create,
-  ) {
-    return ProviderOverride(
-      origin: this,
-      override: EventsForDayProvider._internal(
-        (ref) => create(ref as EventsForDayRef),
-        from: from,
-        name: null,
+final class CalendarEventsProvider
+    extends
+        $FunctionalProvider<
+          Map<DateTime, List<CalendarEvent>>,
+          Map<DateTime, List<CalendarEvent>>,
+          Map<DateTime, List<CalendarEvent>>
+        >
+    with $Provider<Map<DateTime, List<CalendarEvent>>> {
+  const CalendarEventsProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'calendarEventsProvider',
+        isAutoDispose: true,
         dependencies: null,
-        allTransitiveDependencies: null,
-        debugGetCreateSourceHash: null,
-        day: day,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$calendarEventsHash();
+
+  @$internal
+  @override
+  $ProviderElement<Map<DateTime, List<CalendarEvent>>> $createElement(
+    $ProviderPointer pointer,
+  ) => $ProviderElement(pointer);
+
+  @override
+  Map<DateTime, List<CalendarEvent>> create(Ref ref) {
+    return calendarEvents(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(Map<DateTime, List<CalendarEvent>> value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<Map<DateTime, List<CalendarEvent>>>(
+        value,
       ),
     );
   }
+}
+
+String _$calendarEventsHash() => r'fdf9888e5e3c00a4620d486e2dcd1079cf61de1d';
+
+/// Events for a specific selected day (used by day detail panel).
+
+@ProviderFor(eventsForDay)
+const eventsForDayProvider = EventsForDayFamily._();
+
+/// Events for a specific selected day (used by day detail panel).
+
+final class EventsForDayProvider
+    extends
+        $FunctionalProvider<
+          List<CalendarEvent>,
+          List<CalendarEvent>,
+          List<CalendarEvent>
+        >
+    with $Provider<List<CalendarEvent>> {
+  /// Events for a specific selected day (used by day detail panel).
+  const EventsForDayProvider._({
+    required EventsForDayFamily super.from,
+    required DateTime super.argument,
+  }) : super(
+         retry: null,
+         name: r'eventsForDayProvider',
+         isAutoDispose: true,
+         dependencies: null,
+         $allTransitiveDependencies: null,
+       );
 
   @override
-  AutoDisposeProviderElement<List<CalendarEvent>> createElement() {
-    return _EventsForDayProviderElement(this);
+  String debugGetCreateSourceHash() => _$eventsForDayHash();
+
+  @override
+  String toString() {
+    return r'eventsForDayProvider'
+        ''
+        '($argument)';
+  }
+
+  @$internal
+  @override
+  $ProviderElement<List<CalendarEvent>> $createElement(
+    $ProviderPointer pointer,
+  ) => $ProviderElement(pointer);
+
+  @override
+  List<CalendarEvent> create(Ref ref) {
+    final argument = this.argument as DateTime;
+    return eventsForDay(ref, argument);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(List<CalendarEvent> value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<List<CalendarEvent>>(value),
+    );
   }
 
   @override
   bool operator ==(Object other) {
-    return other is EventsForDayProvider && other.day == day;
+    return other is EventsForDayProvider && other.argument == argument;
   }
 
   @override
   int get hashCode {
-    var hash = _SystemHash.combine(0, runtimeType.hashCode);
-    hash = _SystemHash.combine(hash, day.hashCode);
-
-    return _SystemHash.finish(hash);
+    return argument.hashCode;
   }
 }
 
-mixin EventsForDayRef on AutoDisposeProviderRef<List<CalendarEvent>> {
-  /// The parameter `day` of this provider.
-  DateTime get day;
-}
+String _$eventsForDayHash() => r'ec77444042851c4d8e3a7fdbd7aa8c5d713fd570';
 
-class _EventsForDayProviderElement
-    extends AutoDisposeProviderElement<List<CalendarEvent>>
-    with EventsForDayRef {
-  _EventsForDayProviderElement(super.provider);
+/// Events for a specific selected day (used by day detail panel).
+
+final class EventsForDayFamily extends $Family
+    with $FunctionalFamilyOverride<List<CalendarEvent>, DateTime> {
+  const EventsForDayFamily._()
+    : super(
+        retry: null,
+        name: r'eventsForDayProvider',
+        dependencies: null,
+        $allTransitiveDependencies: null,
+        isAutoDispose: true,
+      );
+
+  /// Events for a specific selected day (used by day detail panel).
+
+  EventsForDayProvider call(DateTime day) =>
+      EventsForDayProvider._(argument: day, from: this);
 
   @override
-  DateTime get day => (origin as EventsForDayProvider).day;
+  String toString() => r'eventsForDayProvider';
+}
+
+/// Monthly total for the currently focused month (shown in header).
+
+@ProviderFor(calendarMonthlyTotal)
+const calendarMonthlyTotalProvider = CalendarMonthlyTotalProvider._();
+
+/// Monthly total for the currently focused month (shown in header).
+
+final class CalendarMonthlyTotalProvider
+    extends
+        $FunctionalProvider<
+          (double, String),
+          (double, String),
+          (double, String)
+        >
+    with $Provider<(double, String)> {
+  /// Monthly total for the currently focused month (shown in header).
+  const CalendarMonthlyTotalProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'calendarMonthlyTotalProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$calendarMonthlyTotalHash();
+
+  @$internal
+  @override
+  $ProviderElement<(double, String)> $createElement($ProviderPointer pointer) =>
+      $ProviderElement(pointer);
+
+  @override
+  (double, String) create(Ref ref) {
+    return calendarMonthlyTotal(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue((double, String) value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<(double, String)>(value),
+    );
+  }
 }
 
 String _$calendarMonthlyTotalHash() =>
     r'1e6eac5b4c96df7faa77aaa74c1c618c996dc129';
-
-/// Monthly total for the currently focused month (shown in header).
-///
-/// Copied from [calendarMonthlyTotal].
-@ProviderFor(calendarMonthlyTotal)
-final calendarMonthlyTotalProvider =
-    AutoDisposeProvider<(double, String)>.internal(
-  calendarMonthlyTotal,
-  name: r'calendarMonthlyTotalProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$calendarMonthlyTotalHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
-
-typedef CalendarMonthlyTotalRef = AutoDisposeProviderRef<(double, String)>;
-String _$calendarFocusedMonthHash() =>
-    r'2ac1471443b26532540141ff18602ede7c47c9bf';
-
-/// See also [CalendarFocusedMonth].
-@ProviderFor(CalendarFocusedMonth)
-final calendarFocusedMonthProvider =
-    AutoDisposeNotifierProvider<CalendarFocusedMonth, DateTime>.internal(
-  CalendarFocusedMonth.new,
-  name: r'calendarFocusedMonthProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$calendarFocusedMonthHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
-
-typedef _$CalendarFocusedMonth = AutoDisposeNotifier<DateTime>;
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

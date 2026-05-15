@@ -46,8 +46,9 @@ const ReminderModelSchema = CollectionSchema(
       id: 5,
       name: r'subscriptionId',
       type: IsarType.long,
-    )
+    ),
   },
+
   estimateSize: _reminderModelEstimateSize,
   serialize: _reminderModelSerialize,
   deserialize: _reminderModelDeserialize,
@@ -56,10 +57,11 @@ const ReminderModelSchema = CollectionSchema(
   indexes: {},
   links: {},
   embeddedSchemas: {},
+
   getId: _reminderModelGetId,
   getLinks: _reminderModelGetLinks,
   attach: _reminderModelAttach,
-  version: '3.1.0+1',
+  version: '3.3.0',
 );
 
 int _reminderModelEstimateSize(
@@ -135,7 +137,10 @@ List<IsarLinkBase<dynamic>> _reminderModelGetLinks(ReminderModel object) {
 }
 
 void _reminderModelAttach(
-    IsarCollection<dynamic> col, Id id, ReminderModel object) {
+  IsarCollection<dynamic> col,
+  Id id,
+  ReminderModel object,
+) {
   object.id = id;
 }
 
@@ -151,17 +156,16 @@ extension ReminderModelQueryWhereSort
 extension ReminderModelQueryWhere
     on QueryBuilder<ReminderModel, ReminderModel, QWhereClause> {
   QueryBuilder<ReminderModel, ReminderModel, QAfterWhereClause> idEqualTo(
-      Id id) {
+    Id id,
+  ) {
     return QueryBuilder.apply(this, (query) {
-      return query.addWhereClause(IdWhereClause.between(
-        lower: id,
-        upper: id,
-      ));
+      return query.addWhereClause(IdWhereClause.between(lower: id, upper: id));
     });
   }
 
   QueryBuilder<ReminderModel, ReminderModel, QAfterWhereClause> idNotEqualTo(
-      Id id) {
+    Id id,
+  ) {
     return QueryBuilder.apply(this, (query) {
       if (query.whereSort == Sort.asc) {
         return query
@@ -184,8 +188,9 @@ extension ReminderModelQueryWhere
   }
 
   QueryBuilder<ReminderModel, ReminderModel, QAfterWhereClause> idGreaterThan(
-      Id id,
-      {bool include = false}) {
+    Id id, {
+    bool include = false,
+  }) {
     return QueryBuilder.apply(this, (query) {
       return query.addWhereClause(
         IdWhereClause.greaterThan(lower: id, includeLower: include),
@@ -194,8 +199,9 @@ extension ReminderModelQueryWhere
   }
 
   QueryBuilder<ReminderModel, ReminderModel, QAfterWhereClause> idLessThan(
-      Id id,
-      {bool include = false}) {
+    Id id, {
+    bool include = false,
+  }) {
     return QueryBuilder.apply(this, (query) {
       return query.addWhereClause(
         IdWhereClause.lessThan(upper: id, includeUpper: include),
@@ -210,12 +216,14 @@ extension ReminderModelQueryWhere
     bool includeUpper = true,
   }) {
     return QueryBuilder.apply(this, (query) {
-      return query.addWhereClause(IdWhereClause.between(
-        lower: lowerId,
-        includeLower: includeLower,
-        upper: upperId,
-        includeUpper: includeUpper,
-      ));
+      return query.addWhereClause(
+        IdWhereClause.between(
+          lower: lowerId,
+          includeLower: includeLower,
+          upper: upperId,
+          includeUpper: includeUpper,
+        ),
+      );
     });
   }
 }
@@ -223,138 +231,135 @@ extension ReminderModelQueryWhere
 extension ReminderModelQueryFilter
     on QueryBuilder<ReminderModel, ReminderModel, QFilterCondition> {
   QueryBuilder<ReminderModel, ReminderModel, QAfterFilterCondition>
-      createdAtEqualTo(DateTime value) {
+  createdAtEqualTo(DateTime value) {
     return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.equalTo(
-        property: r'createdAt',
-        value: value,
-      ));
+      return query.addFilterCondition(
+        FilterCondition.equalTo(property: r'createdAt', value: value),
+      );
     });
   }
 
   QueryBuilder<ReminderModel, ReminderModel, QAfterFilterCondition>
-      createdAtGreaterThan(
-    DateTime value, {
-    bool include = false,
-  }) {
+  createdAtGreaterThan(DateTime value, {bool include = false}) {
     return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.greaterThan(
-        include: include,
-        property: r'createdAt',
-        value: value,
-      ));
+      return query.addFilterCondition(
+        FilterCondition.greaterThan(
+          include: include,
+          property: r'createdAt',
+          value: value,
+        ),
+      );
     });
   }
 
   QueryBuilder<ReminderModel, ReminderModel, QAfterFilterCondition>
-      createdAtLessThan(
-    DateTime value, {
-    bool include = false,
-  }) {
+  createdAtLessThan(DateTime value, {bool include = false}) {
     return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.lessThan(
-        include: include,
-        property: r'createdAt',
-        value: value,
-      ));
+      return query.addFilterCondition(
+        FilterCondition.lessThan(
+          include: include,
+          property: r'createdAt',
+          value: value,
+        ),
+      );
     });
   }
 
   QueryBuilder<ReminderModel, ReminderModel, QAfterFilterCondition>
-      createdAtBetween(
+  createdAtBetween(
     DateTime lower,
     DateTime upper, {
     bool includeLower = true,
     bool includeUpper = true,
   }) {
     return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.between(
-        property: r'createdAt',
-        lower: lower,
-        includeLower: includeLower,
-        upper: upper,
-        includeUpper: includeUpper,
-      ));
+      return query.addFilterCondition(
+        FilterCondition.between(
+          property: r'createdAt',
+          lower: lower,
+          includeLower: includeLower,
+          upper: upper,
+          includeUpper: includeUpper,
+        ),
+      );
     });
   }
 
   QueryBuilder<ReminderModel, ReminderModel, QAfterFilterCondition>
-      daysBeforeEqualTo(int value) {
+  daysBeforeEqualTo(int value) {
     return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.equalTo(
-        property: r'daysBefore',
-        value: value,
-      ));
+      return query.addFilterCondition(
+        FilterCondition.equalTo(property: r'daysBefore', value: value),
+      );
     });
   }
 
   QueryBuilder<ReminderModel, ReminderModel, QAfterFilterCondition>
-      daysBeforeGreaterThan(
-    int value, {
-    bool include = false,
-  }) {
+  daysBeforeGreaterThan(int value, {bool include = false}) {
     return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.greaterThan(
-        include: include,
-        property: r'daysBefore',
-        value: value,
-      ));
+      return query.addFilterCondition(
+        FilterCondition.greaterThan(
+          include: include,
+          property: r'daysBefore',
+          value: value,
+        ),
+      );
     });
   }
 
   QueryBuilder<ReminderModel, ReminderModel, QAfterFilterCondition>
-      daysBeforeLessThan(
-    int value, {
-    bool include = false,
-  }) {
+  daysBeforeLessThan(int value, {bool include = false}) {
     return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.lessThan(
-        include: include,
-        property: r'daysBefore',
-        value: value,
-      ));
+      return query.addFilterCondition(
+        FilterCondition.lessThan(
+          include: include,
+          property: r'daysBefore',
+          value: value,
+        ),
+      );
     });
   }
 
   QueryBuilder<ReminderModel, ReminderModel, QAfterFilterCondition>
-      daysBeforeBetween(
+  daysBeforeBetween(
     int lower,
     int upper, {
     bool includeLower = true,
     bool includeUpper = true,
   }) {
     return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.between(
-        property: r'daysBefore',
-        lower: lower,
-        includeLower: includeLower,
-        upper: upper,
-        includeUpper: includeUpper,
-      ));
+      return query.addFilterCondition(
+        FilterCondition.between(
+          property: r'daysBefore',
+          lower: lower,
+          includeLower: includeLower,
+          upper: upper,
+          includeUpper: includeUpper,
+        ),
+      );
     });
   }
 
   QueryBuilder<ReminderModel, ReminderModel, QAfterFilterCondition> idEqualTo(
-      Id value) {
+    Id value,
+  ) {
     return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.equalTo(
-        property: r'id',
-        value: value,
-      ));
+      return query.addFilterCondition(
+        FilterCondition.equalTo(property: r'id', value: value),
+      );
     });
   }
 
   QueryBuilder<ReminderModel, ReminderModel, QAfterFilterCondition>
-      idGreaterThan(
-    Id value, {
-    bool include = false,
-  }) {
+  idGreaterThan(Id value, {bool include = false}) {
     return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.greaterThan(
-        include: include,
-        property: r'id',
-        value: value,
-      ));
+      return query.addFilterCondition(
+        FilterCondition.greaterThan(
+          include: include,
+          property: r'id',
+          value: value,
+        ),
+      );
     });
   }
 
@@ -363,11 +368,13 @@ extension ReminderModelQueryFilter
     bool include = false,
   }) {
     return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.lessThan(
-        include: include,
-        property: r'id',
-        value: value,
-      ));
+      return query.addFilterCondition(
+        FilterCondition.lessThan(
+          include: include,
+          property: r'id',
+          value: value,
+        ),
+      );
     });
   }
 
@@ -378,191 +385,189 @@ extension ReminderModelQueryFilter
     bool includeUpper = true,
   }) {
     return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.between(
-        property: r'id',
-        lower: lower,
-        includeLower: includeLower,
-        upper: upper,
-        includeUpper: includeUpper,
-      ));
+      return query.addFilterCondition(
+        FilterCondition.between(
+          property: r'id',
+          lower: lower,
+          includeLower: includeLower,
+          upper: upper,
+          includeUpper: includeUpper,
+        ),
+      );
     });
   }
 
   QueryBuilder<ReminderModel, ReminderModel, QAfterFilterCondition>
-      isEnabledEqualTo(bool value) {
+  isEnabledEqualTo(bool value) {
     return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.equalTo(
-        property: r'isEnabled',
-        value: value,
-      ));
+      return query.addFilterCondition(
+        FilterCondition.equalTo(property: r'isEnabled', value: value),
+      );
     });
   }
 
   QueryBuilder<ReminderModel, ReminderModel, QAfterFilterCondition>
-      remindHourEqualTo(int value) {
+  remindHourEqualTo(int value) {
     return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.equalTo(
-        property: r'remindHour',
-        value: value,
-      ));
+      return query.addFilterCondition(
+        FilterCondition.equalTo(property: r'remindHour', value: value),
+      );
     });
   }
 
   QueryBuilder<ReminderModel, ReminderModel, QAfterFilterCondition>
-      remindHourGreaterThan(
-    int value, {
-    bool include = false,
-  }) {
+  remindHourGreaterThan(int value, {bool include = false}) {
     return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.greaterThan(
-        include: include,
-        property: r'remindHour',
-        value: value,
-      ));
+      return query.addFilterCondition(
+        FilterCondition.greaterThan(
+          include: include,
+          property: r'remindHour',
+          value: value,
+        ),
+      );
     });
   }
 
   QueryBuilder<ReminderModel, ReminderModel, QAfterFilterCondition>
-      remindHourLessThan(
-    int value, {
-    bool include = false,
-  }) {
+  remindHourLessThan(int value, {bool include = false}) {
     return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.lessThan(
-        include: include,
-        property: r'remindHour',
-        value: value,
-      ));
+      return query.addFilterCondition(
+        FilterCondition.lessThan(
+          include: include,
+          property: r'remindHour',
+          value: value,
+        ),
+      );
     });
   }
 
   QueryBuilder<ReminderModel, ReminderModel, QAfterFilterCondition>
-      remindHourBetween(
+  remindHourBetween(
     int lower,
     int upper, {
     bool includeLower = true,
     bool includeUpper = true,
   }) {
     return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.between(
-        property: r'remindHour',
-        lower: lower,
-        includeLower: includeLower,
-        upper: upper,
-        includeUpper: includeUpper,
-      ));
+      return query.addFilterCondition(
+        FilterCondition.between(
+          property: r'remindHour',
+          lower: lower,
+          includeLower: includeLower,
+          upper: upper,
+          includeUpper: includeUpper,
+        ),
+      );
     });
   }
 
   QueryBuilder<ReminderModel, ReminderModel, QAfterFilterCondition>
-      remindMinuteEqualTo(int value) {
+  remindMinuteEqualTo(int value) {
     return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.equalTo(
-        property: r'remindMinute',
-        value: value,
-      ));
+      return query.addFilterCondition(
+        FilterCondition.equalTo(property: r'remindMinute', value: value),
+      );
     });
   }
 
   QueryBuilder<ReminderModel, ReminderModel, QAfterFilterCondition>
-      remindMinuteGreaterThan(
-    int value, {
-    bool include = false,
-  }) {
+  remindMinuteGreaterThan(int value, {bool include = false}) {
     return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.greaterThan(
-        include: include,
-        property: r'remindMinute',
-        value: value,
-      ));
+      return query.addFilterCondition(
+        FilterCondition.greaterThan(
+          include: include,
+          property: r'remindMinute',
+          value: value,
+        ),
+      );
     });
   }
 
   QueryBuilder<ReminderModel, ReminderModel, QAfterFilterCondition>
-      remindMinuteLessThan(
-    int value, {
-    bool include = false,
-  }) {
+  remindMinuteLessThan(int value, {bool include = false}) {
     return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.lessThan(
-        include: include,
-        property: r'remindMinute',
-        value: value,
-      ));
+      return query.addFilterCondition(
+        FilterCondition.lessThan(
+          include: include,
+          property: r'remindMinute',
+          value: value,
+        ),
+      );
     });
   }
 
   QueryBuilder<ReminderModel, ReminderModel, QAfterFilterCondition>
-      remindMinuteBetween(
+  remindMinuteBetween(
     int lower,
     int upper, {
     bool includeLower = true,
     bool includeUpper = true,
   }) {
     return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.between(
-        property: r'remindMinute',
-        lower: lower,
-        includeLower: includeLower,
-        upper: upper,
-        includeUpper: includeUpper,
-      ));
+      return query.addFilterCondition(
+        FilterCondition.between(
+          property: r'remindMinute',
+          lower: lower,
+          includeLower: includeLower,
+          upper: upper,
+          includeUpper: includeUpper,
+        ),
+      );
     });
   }
 
   QueryBuilder<ReminderModel, ReminderModel, QAfterFilterCondition>
-      subscriptionIdEqualTo(int value) {
+  subscriptionIdEqualTo(int value) {
     return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.equalTo(
-        property: r'subscriptionId',
-        value: value,
-      ));
+      return query.addFilterCondition(
+        FilterCondition.equalTo(property: r'subscriptionId', value: value),
+      );
     });
   }
 
   QueryBuilder<ReminderModel, ReminderModel, QAfterFilterCondition>
-      subscriptionIdGreaterThan(
-    int value, {
-    bool include = false,
-  }) {
+  subscriptionIdGreaterThan(int value, {bool include = false}) {
     return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.greaterThan(
-        include: include,
-        property: r'subscriptionId',
-        value: value,
-      ));
+      return query.addFilterCondition(
+        FilterCondition.greaterThan(
+          include: include,
+          property: r'subscriptionId',
+          value: value,
+        ),
+      );
     });
   }
 
   QueryBuilder<ReminderModel, ReminderModel, QAfterFilterCondition>
-      subscriptionIdLessThan(
-    int value, {
-    bool include = false,
-  }) {
+  subscriptionIdLessThan(int value, {bool include = false}) {
     return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.lessThan(
-        include: include,
-        property: r'subscriptionId',
-        value: value,
-      ));
+      return query.addFilterCondition(
+        FilterCondition.lessThan(
+          include: include,
+          property: r'subscriptionId',
+          value: value,
+        ),
+      );
     });
   }
 
   QueryBuilder<ReminderModel, ReminderModel, QAfterFilterCondition>
-      subscriptionIdBetween(
+  subscriptionIdBetween(
     int lower,
     int upper, {
     bool includeLower = true,
     bool includeUpper = true,
   }) {
     return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.between(
-        property: r'subscriptionId',
-        lower: lower,
-        includeLower: includeLower,
-        upper: upper,
-        includeUpper: includeUpper,
-      ));
+      return query.addFilterCondition(
+        FilterCondition.between(
+          property: r'subscriptionId',
+          lower: lower,
+          includeLower: includeLower,
+          upper: upper,
+          includeUpper: includeUpper,
+        ),
+      );
     });
   }
 }
@@ -582,7 +587,7 @@ extension ReminderModelQuerySortBy
   }
 
   QueryBuilder<ReminderModel, ReminderModel, QAfterSortBy>
-      sortByCreatedAtDesc() {
+  sortByCreatedAtDesc() {
     return QueryBuilder.apply(this, (query) {
       return query.addSortBy(r'createdAt', Sort.desc);
     });
@@ -595,7 +600,7 @@ extension ReminderModelQuerySortBy
   }
 
   QueryBuilder<ReminderModel, ReminderModel, QAfterSortBy>
-      sortByDaysBeforeDesc() {
+  sortByDaysBeforeDesc() {
     return QueryBuilder.apply(this, (query) {
       return query.addSortBy(r'daysBefore', Sort.desc);
     });
@@ -608,7 +613,7 @@ extension ReminderModelQuerySortBy
   }
 
   QueryBuilder<ReminderModel, ReminderModel, QAfterSortBy>
-      sortByIsEnabledDesc() {
+  sortByIsEnabledDesc() {
     return QueryBuilder.apply(this, (query) {
       return query.addSortBy(r'isEnabled', Sort.desc);
     });
@@ -621,35 +626,35 @@ extension ReminderModelQuerySortBy
   }
 
   QueryBuilder<ReminderModel, ReminderModel, QAfterSortBy>
-      sortByRemindHourDesc() {
+  sortByRemindHourDesc() {
     return QueryBuilder.apply(this, (query) {
       return query.addSortBy(r'remindHour', Sort.desc);
     });
   }
 
   QueryBuilder<ReminderModel, ReminderModel, QAfterSortBy>
-      sortByRemindMinute() {
+  sortByRemindMinute() {
     return QueryBuilder.apply(this, (query) {
       return query.addSortBy(r'remindMinute', Sort.asc);
     });
   }
 
   QueryBuilder<ReminderModel, ReminderModel, QAfterSortBy>
-      sortByRemindMinuteDesc() {
+  sortByRemindMinuteDesc() {
     return QueryBuilder.apply(this, (query) {
       return query.addSortBy(r'remindMinute', Sort.desc);
     });
   }
 
   QueryBuilder<ReminderModel, ReminderModel, QAfterSortBy>
-      sortBySubscriptionId() {
+  sortBySubscriptionId() {
     return QueryBuilder.apply(this, (query) {
       return query.addSortBy(r'subscriptionId', Sort.asc);
     });
   }
 
   QueryBuilder<ReminderModel, ReminderModel, QAfterSortBy>
-      sortBySubscriptionIdDesc() {
+  sortBySubscriptionIdDesc() {
     return QueryBuilder.apply(this, (query) {
       return query.addSortBy(r'subscriptionId', Sort.desc);
     });
@@ -665,7 +670,7 @@ extension ReminderModelQuerySortThenBy
   }
 
   QueryBuilder<ReminderModel, ReminderModel, QAfterSortBy>
-      thenByCreatedAtDesc() {
+  thenByCreatedAtDesc() {
     return QueryBuilder.apply(this, (query) {
       return query.addSortBy(r'createdAt', Sort.desc);
     });
@@ -678,7 +683,7 @@ extension ReminderModelQuerySortThenBy
   }
 
   QueryBuilder<ReminderModel, ReminderModel, QAfterSortBy>
-      thenByDaysBeforeDesc() {
+  thenByDaysBeforeDesc() {
     return QueryBuilder.apply(this, (query) {
       return query.addSortBy(r'daysBefore', Sort.desc);
     });
@@ -703,7 +708,7 @@ extension ReminderModelQuerySortThenBy
   }
 
   QueryBuilder<ReminderModel, ReminderModel, QAfterSortBy>
-      thenByIsEnabledDesc() {
+  thenByIsEnabledDesc() {
     return QueryBuilder.apply(this, (query) {
       return query.addSortBy(r'isEnabled', Sort.desc);
     });
@@ -716,35 +721,35 @@ extension ReminderModelQuerySortThenBy
   }
 
   QueryBuilder<ReminderModel, ReminderModel, QAfterSortBy>
-      thenByRemindHourDesc() {
+  thenByRemindHourDesc() {
     return QueryBuilder.apply(this, (query) {
       return query.addSortBy(r'remindHour', Sort.desc);
     });
   }
 
   QueryBuilder<ReminderModel, ReminderModel, QAfterSortBy>
-      thenByRemindMinute() {
+  thenByRemindMinute() {
     return QueryBuilder.apply(this, (query) {
       return query.addSortBy(r'remindMinute', Sort.asc);
     });
   }
 
   QueryBuilder<ReminderModel, ReminderModel, QAfterSortBy>
-      thenByRemindMinuteDesc() {
+  thenByRemindMinuteDesc() {
     return QueryBuilder.apply(this, (query) {
       return query.addSortBy(r'remindMinute', Sort.desc);
     });
   }
 
   QueryBuilder<ReminderModel, ReminderModel, QAfterSortBy>
-      thenBySubscriptionId() {
+  thenBySubscriptionId() {
     return QueryBuilder.apply(this, (query) {
       return query.addSortBy(r'subscriptionId', Sort.asc);
     });
   }
 
   QueryBuilder<ReminderModel, ReminderModel, QAfterSortBy>
-      thenBySubscriptionIdDesc() {
+  thenBySubscriptionIdDesc() {
     return QueryBuilder.apply(this, (query) {
       return query.addSortBy(r'subscriptionId', Sort.desc);
     });
@@ -778,14 +783,14 @@ extension ReminderModelQueryWhereDistinct
   }
 
   QueryBuilder<ReminderModel, ReminderModel, QDistinct>
-      distinctByRemindMinute() {
+  distinctByRemindMinute() {
     return QueryBuilder.apply(this, (query) {
       return query.addDistinctBy(r'remindMinute');
     });
   }
 
   QueryBuilder<ReminderModel, ReminderModel, QDistinct>
-      distinctBySubscriptionId() {
+  distinctBySubscriptionId() {
     return QueryBuilder.apply(this, (query) {
       return query.addDistinctBy(r'subscriptionId');
     });

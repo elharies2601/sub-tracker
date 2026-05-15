@@ -39,7 +39,7 @@ class _LockScreenOverlayState extends ConsumerState<LockScreenOverlay> {
       );
 
       if (success && mounted) {
-        ref.read(appAuthNotifierProvider.notifier).unlock();
+        ref.read(appAuthProvider.notifier).unlock();
       }
     } catch (e) {
       // User canceled or auth failed

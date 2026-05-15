@@ -3,7 +3,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'payment_history.freezed.dart';
 
 @freezed
-class PaymentHistory with _$PaymentHistory {
+abstract class PaymentHistory with _$PaymentHistory {
   const PaymentHistory._();
 
   const factory PaymentHistory({

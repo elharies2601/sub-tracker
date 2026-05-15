@@ -6,7 +6,7 @@ part 'app_settings.freezed.dart';
 enum AppTheme { system, light, dark }
 
 @freezed
-class AppSettings with _$AppSettings {
+abstract class AppSettings with _$AppSettings {
   const AppSettings._();
 
   const factory AppSettings({

@@ -6,188 +6,498 @@ part of 'settings_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
+
+@ProviderFor(appSettingsLocalDs)
+const appSettingsLocalDsProvider = AppSettingsLocalDsProvider._();
+
+final class AppSettingsLocalDsProvider
+    extends
+        $FunctionalProvider<
+          AppSettingsLocalDataSource,
+          AppSettingsLocalDataSource,
+          AppSettingsLocalDataSource
+        >
+    with $Provider<AppSettingsLocalDataSource> {
+  const AppSettingsLocalDsProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'appSettingsLocalDsProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$appSettingsLocalDsHash();
+
+  @$internal
+  @override
+  $ProviderElement<AppSettingsLocalDataSource> $createElement(
+    $ProviderPointer pointer,
+  ) => $ProviderElement(pointer);
+
+  @override
+  AppSettingsLocalDataSource create(Ref ref) {
+    return appSettingsLocalDs(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(AppSettingsLocalDataSource value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<AppSettingsLocalDataSource>(value),
+    );
+  }
+}
+
 String _$appSettingsLocalDsHash() =>
     r'80a7f07378676d9127c7269eb91cfbdf68518752';
 
-/// See also [appSettingsLocalDs].
-@ProviderFor(appSettingsLocalDs)
-final appSettingsLocalDsProvider =
-    AutoDisposeProvider<AppSettingsLocalDataSource>.internal(
-  appSettingsLocalDs,
-  name: r'appSettingsLocalDsProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$appSettingsLocalDsHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+@ProviderFor(appSettingsRepository)
+const appSettingsRepositoryProvider = AppSettingsRepositoryProvider._();
 
-typedef AppSettingsLocalDsRef
-    = AutoDisposeProviderRef<AppSettingsLocalDataSource>;
+final class AppSettingsRepositoryProvider
+    extends
+        $FunctionalProvider<
+          AppSettingsRepository,
+          AppSettingsRepository,
+          AppSettingsRepository
+        >
+    with $Provider<AppSettingsRepository> {
+  const AppSettingsRepositoryProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'appSettingsRepositoryProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$appSettingsRepositoryHash();
+
+  @$internal
+  @override
+  $ProviderElement<AppSettingsRepository> $createElement(
+    $ProviderPointer pointer,
+  ) => $ProviderElement(pointer);
+
+  @override
+  AppSettingsRepository create(Ref ref) {
+    return appSettingsRepository(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(AppSettingsRepository value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<AppSettingsRepository>(value),
+    );
+  }
+}
+
 String _$appSettingsRepositoryHash() =>
     r'351f7ac004d2908125edc54c37748b47de15e943';
 
-/// See also [appSettingsRepository].
-@ProviderFor(appSettingsRepository)
-final appSettingsRepositoryProvider =
-    AutoDisposeProvider<AppSettingsRepository>.internal(
-  appSettingsRepository,
-  name: r'appSettingsRepositoryProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$appSettingsRepositoryHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+@ProviderFor(loadAppSettings)
+const loadAppSettingsProvider = LoadAppSettingsProvider._();
 
-typedef AppSettingsRepositoryRef
-    = AutoDisposeProviderRef<AppSettingsRepository>;
+final class LoadAppSettingsProvider
+    extends
+        $FunctionalProvider<LoadAppSettings, LoadAppSettings, LoadAppSettings>
+    with $Provider<LoadAppSettings> {
+  const LoadAppSettingsProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'loadAppSettingsProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$loadAppSettingsHash();
+
+  @$internal
+  @override
+  $ProviderElement<LoadAppSettings> $createElement($ProviderPointer pointer) =>
+      $ProviderElement(pointer);
+
+  @override
+  LoadAppSettings create(Ref ref) {
+    return loadAppSettings(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(LoadAppSettings value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<LoadAppSettings>(value),
+    );
+  }
+}
+
 String _$loadAppSettingsHash() => r'd5f991275f376bd56dcb7265e0ce2d0aa2e8c11c';
 
-/// See also [loadAppSettings].
-@ProviderFor(loadAppSettings)
-final loadAppSettingsProvider = AutoDisposeProvider<LoadAppSettings>.internal(
-  loadAppSettings,
-  name: r'loadAppSettingsProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$loadAppSettingsHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+@ProviderFor(saveAppSettings)
+const saveAppSettingsProvider = SaveAppSettingsProvider._();
 
-typedef LoadAppSettingsRef = AutoDisposeProviderRef<LoadAppSettings>;
+final class SaveAppSettingsProvider
+    extends
+        $FunctionalProvider<SaveAppSettings, SaveAppSettings, SaveAppSettings>
+    with $Provider<SaveAppSettings> {
+  const SaveAppSettingsProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'saveAppSettingsProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$saveAppSettingsHash();
+
+  @$internal
+  @override
+  $ProviderElement<SaveAppSettings> $createElement($ProviderPointer pointer) =>
+      $ProviderElement(pointer);
+
+  @override
+  SaveAppSettings create(Ref ref) {
+    return saveAppSettings(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(SaveAppSettings value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<SaveAppSettings>(value),
+    );
+  }
+}
+
 String _$saveAppSettingsHash() => r'1392d1d4a6fe139a7b9a27ce37cedff5db85aa98';
 
-/// See also [saveAppSettings].
-@ProviderFor(saveAppSettings)
-final saveAppSettingsProvider = AutoDisposeProvider<SaveAppSettings>.internal(
-  saveAppSettings,
-  name: r'saveAppSettingsProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$saveAppSettingsHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+@ProviderFor(AppSettingsNotifier)
+const appSettingsProvider = AppSettingsNotifierProvider._();
 
-typedef SaveAppSettingsRef = AutoDisposeProviderRef<SaveAppSettings>;
-String _$appThemeModeHash() => r'df1cba10d8602d2e08b5b16ff0984b41ab3cdab6';
+final class AppSettingsNotifierProvider
+    extends $AsyncNotifierProvider<AppSettingsNotifier, AppSettings> {
+  const AppSettingsNotifierProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'appSettingsProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
 
-/// Current ThemeMode — watched by MaterialApp.router to react to changes.
-///
-/// Copied from [appThemeMode].
-@ProviderFor(appThemeMode)
-final appThemeModeProvider = AutoDisposeProvider<ThemeMode>.internal(
-  appThemeMode,
-  name: r'appThemeModeProvider',
-  debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$appThemeModeHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+  @override
+  String debugGetCreateSourceHash() => _$appSettingsNotifierHash();
 
-typedef AppThemeModeRef = AutoDisposeProviderRef<ThemeMode>;
-String _$defaultCurrencyHash() => r'07ef2aee2a1eb924ac464773b5e7a719df0e2ce3';
+  @$internal
+  @override
+  AppSettingsNotifier create() => AppSettingsNotifier();
+}
 
-/// Current default currency — used by form pages as initial value.
-///
-/// Copied from [defaultCurrency].
-@ProviderFor(defaultCurrency)
-final defaultCurrencyProvider = AutoDisposeProvider<String>.internal(
-  defaultCurrency,
-  name: r'defaultCurrencyProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$defaultCurrencyHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
-
-typedef DefaultCurrencyRef = AutoDisposeProviderRef<String>;
-String _$appLocaleHash() => r'2d5995481ef39bc0017b64d32192e8f607bd051a';
-
-/// Current Locale — watched by MaterialApp.router to react to language changes.
-///
-/// Copied from [appLocale].
-@ProviderFor(appLocale)
-final appLocaleProvider = AutoDisposeProvider<Locale>.internal(
-  appLocale,
-  name: r'appLocaleProvider',
-  debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$appLocaleHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
-
-typedef AppLocaleRef = AutoDisposeProviderRef<Locale>;
-String _$onboardingCompletedHash() =>
-    r'adee8156e1791389ff7857d5a454f790e7b67747';
-
-/// Whether onboarding has been completed — used by router redirect.
-///
-/// Copied from [onboardingCompleted].
-@ProviderFor(onboardingCompleted)
-final onboardingCompletedProvider = AutoDisposeProvider<bool>.internal(
-  onboardingCompleted,
-  name: r'onboardingCompletedProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$onboardingCompletedHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
-
-typedef OnboardingCompletedRef = AutoDisposeProviderRef<bool>;
-String _$biometricSupportHash() => r'3d69539fb5d12b93d9a571b47c08690f75764345';
-
-/// Checks if device supports biometric authentication
-///
-/// Copied from [biometricSupport].
-@ProviderFor(biometricSupport)
-final biometricSupportProvider = AutoDisposeFutureProvider<bool>.internal(
-  biometricSupport,
-  name: r'biometricSupportProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$biometricSupportHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
-
-typedef BiometricSupportRef = AutoDisposeFutureProviderRef<bool>;
-String _$appInfoHash() => r'82380d71fdbe012968a4ad4bba7297db2842d660';
-
-/// get app info
-///
-/// Copied from [appInfo].
-@ProviderFor(appInfo)
-final appInfoProvider = AutoDisposeFutureProvider<PackageInfo>.internal(
-  appInfo,
-  name: r'appInfoProvider',
-  debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$appInfoHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
-
-typedef AppInfoRef = AutoDisposeFutureProviderRef<PackageInfo>;
 String _$appSettingsNotifierHash() =>
     r'ef9f1a8d42f968b3e82315adc92c79610be188a0';
 
-/// See also [AppSettingsNotifier].
-@ProviderFor(AppSettingsNotifier)
-final appSettingsNotifierProvider =
-    AutoDisposeAsyncNotifierProvider<AppSettingsNotifier, AppSettings>.internal(
-  AppSettingsNotifier.new,
-  name: r'appSettingsNotifierProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$appSettingsNotifierHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+abstract class _$AppSettingsNotifier extends $AsyncNotifier<AppSettings> {
+  FutureOr<AppSettings> build();
+  @$mustCallSuper
+  @override
+  void runBuild() {
+    final created = build();
+    final ref = this.ref as $Ref<AsyncValue<AppSettings>, AppSettings>;
+    final element =
+        ref.element
+            as $ClassProviderElement<
+              AnyNotifier<AsyncValue<AppSettings>, AppSettings>,
+              AsyncValue<AppSettings>,
+              Object?,
+              Object?
+            >;
+    element.handleValue(ref, created);
+  }
+}
 
-typedef _$AppSettingsNotifier = AutoDisposeAsyncNotifier<AppSettings>;
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+/// Current ThemeMode — watched by MaterialApp.router to react to changes.
+
+@ProviderFor(appThemeMode)
+const appThemeModeProvider = AppThemeModeProvider._();
+
+/// Current ThemeMode — watched by MaterialApp.router to react to changes.
+
+final class AppThemeModeProvider
+    extends $FunctionalProvider<ThemeMode, ThemeMode, ThemeMode>
+    with $Provider<ThemeMode> {
+  /// Current ThemeMode — watched by MaterialApp.router to react to changes.
+  const AppThemeModeProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'appThemeModeProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$appThemeModeHash();
+
+  @$internal
+  @override
+  $ProviderElement<ThemeMode> $createElement($ProviderPointer pointer) =>
+      $ProviderElement(pointer);
+
+  @override
+  ThemeMode create(Ref ref) {
+    return appThemeMode(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(ThemeMode value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<ThemeMode>(value),
+    );
+  }
+}
+
+String _$appThemeModeHash() => r'da1e434684c8ee48775338a8a478ce8fa53d9a38';
+
+/// Current default currency — used by form pages as initial value.
+
+@ProviderFor(defaultCurrency)
+const defaultCurrencyProvider = DefaultCurrencyProvider._();
+
+/// Current default currency — used by form pages as initial value.
+
+final class DefaultCurrencyProvider
+    extends $FunctionalProvider<String, String, String>
+    with $Provider<String> {
+  /// Current default currency — used by form pages as initial value.
+  const DefaultCurrencyProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'defaultCurrencyProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$defaultCurrencyHash();
+
+  @$internal
+  @override
+  $ProviderElement<String> $createElement($ProviderPointer pointer) =>
+      $ProviderElement(pointer);
+
+  @override
+  String create(Ref ref) {
+    return defaultCurrency(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(String value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<String>(value),
+    );
+  }
+}
+
+String _$defaultCurrencyHash() => r'c5d111fe9161cf4218f931f6a46be2a9b0806eb9';
+
+/// Current Locale — watched by MaterialApp.router to react to language changes.
+
+@ProviderFor(appLocale)
+const appLocaleProvider = AppLocaleProvider._();
+
+/// Current Locale — watched by MaterialApp.router to react to language changes.
+
+final class AppLocaleProvider
+    extends $FunctionalProvider<Locale, Locale, Locale>
+    with $Provider<Locale> {
+  /// Current Locale — watched by MaterialApp.router to react to language changes.
+  const AppLocaleProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'appLocaleProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$appLocaleHash();
+
+  @$internal
+  @override
+  $ProviderElement<Locale> $createElement($ProviderPointer pointer) =>
+      $ProviderElement(pointer);
+
+  @override
+  Locale create(Ref ref) {
+    return appLocale(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(Locale value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<Locale>(value),
+    );
+  }
+}
+
+String _$appLocaleHash() => r'f50ca5b5f6a9098721bfba32958609707ed25c3c';
+
+/// Whether onboarding has been completed — used by router redirect.
+
+@ProviderFor(onboardingCompleted)
+const onboardingCompletedProvider = OnboardingCompletedProvider._();
+
+/// Whether onboarding has been completed — used by router redirect.
+
+final class OnboardingCompletedProvider
+    extends $FunctionalProvider<bool, bool, bool>
+    with $Provider<bool> {
+  /// Whether onboarding has been completed — used by router redirect.
+  const OnboardingCompletedProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'onboardingCompletedProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$onboardingCompletedHash();
+
+  @$internal
+  @override
+  $ProviderElement<bool> $createElement($ProviderPointer pointer) =>
+      $ProviderElement(pointer);
+
+  @override
+  bool create(Ref ref) {
+    return onboardingCompleted(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(bool value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<bool>(value),
+    );
+  }
+}
+
+String _$onboardingCompletedHash() =>
+    r'8a40b89dcfb2f1ba81f9fdc3a7294b6b55d9aaf0';
+
+/// Checks if device supports biometric authentication
+
+@ProviderFor(biometricSupport)
+const biometricSupportProvider = BiometricSupportProvider._();
+
+/// Checks if device supports biometric authentication
+
+final class BiometricSupportProvider
+    extends $FunctionalProvider<AsyncValue<bool>, bool, FutureOr<bool>>
+    with $FutureModifier<bool>, $FutureProvider<bool> {
+  /// Checks if device supports biometric authentication
+  const BiometricSupportProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'biometricSupportProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$biometricSupportHash();
+
+  @$internal
+  @override
+  $FutureProviderElement<bool> $createElement($ProviderPointer pointer) =>
+      $FutureProviderElement(pointer);
+
+  @override
+  FutureOr<bool> create(Ref ref) {
+    return biometricSupport(ref);
+  }
+}
+
+String _$biometricSupportHash() => r'3d69539fb5d12b93d9a571b47c08690f75764345';
+
+/// get app info
+
+@ProviderFor(appInfo)
+const appInfoProvider = AppInfoProvider._();
+
+/// get app info
+
+final class AppInfoProvider
+    extends
+        $FunctionalProvider<
+          AsyncValue<PackageInfo>,
+          PackageInfo,
+          FutureOr<PackageInfo>
+        >
+    with $FutureModifier<PackageInfo>, $FutureProvider<PackageInfo> {
+  /// get app info
+  const AppInfoProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'appInfoProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$appInfoHash();
+
+  @$internal
+  @override
+  $FutureProviderElement<PackageInfo> $createElement(
+    $ProviderPointer pointer,
+  ) => $FutureProviderElement(pointer);
+
+  @override
+  FutureOr<PackageInfo> create(Ref ref) {
+    return appInfo(ref);
+  }
+}
+
+String _$appInfoHash() => r'82380d71fdbe012968a4ad4bba7297db2842d660';

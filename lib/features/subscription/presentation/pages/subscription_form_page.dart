@@ -66,7 +66,7 @@ class _SubscriptionFormPageState extends ConsumerState<SubscriptionFormPage> {
   Future<void> _submit() async {
     if (!_formKey.currentState!.validate()) return;
 
-    final notifier = ref.read(subscriptionNotifierProvider.notifier);
+    final notifier = ref.read(subscriptionProvider.notifier);
 
     if (_isEdit) {
       await notifier.update(
@@ -102,7 +102,7 @@ class _SubscriptionFormPageState extends ConsumerState<SubscriptionFormPage> {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
-    final isLoading = ref.watch(subscriptionNotifierProvider).isLoading;
+    final isLoading = ref.watch(subscriptionProvider).isLoading;
 
     return Scaffold(
       appBar: AppBar(

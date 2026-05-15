@@ -6,275 +6,408 @@ part of 'reminder_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
+
+@ProviderFor(notificationScheduler)
+const notificationSchedulerProvider = NotificationSchedulerProvider._();
+
+final class NotificationSchedulerProvider
+    extends
+        $FunctionalProvider<
+          NotificationScheduler,
+          NotificationScheduler,
+          NotificationScheduler
+        >
+    with $Provider<NotificationScheduler> {
+  const NotificationSchedulerProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'notificationSchedulerProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$notificationSchedulerHash();
+
+  @$internal
+  @override
+  $ProviderElement<NotificationScheduler> $createElement(
+    $ProviderPointer pointer,
+  ) => $ProviderElement(pointer);
+
+  @override
+  NotificationScheduler create(Ref ref) {
+    return notificationScheduler(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(NotificationScheduler value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<NotificationScheduler>(value),
+    );
+  }
+}
+
 String _$notificationSchedulerHash() =>
     r'0b7b61336ccbf83faca9af437b258301e3695d13';
 
-/// See also [notificationScheduler].
-@ProviderFor(notificationScheduler)
-final notificationSchedulerProvider =
-    AutoDisposeProvider<NotificationScheduler>.internal(
-  notificationScheduler,
-  name: r'notificationSchedulerProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$notificationSchedulerHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+@ProviderFor(reminderLocalDs)
+const reminderLocalDsProvider = ReminderLocalDsProvider._();
 
-typedef NotificationSchedulerRef
-    = AutoDisposeProviderRef<NotificationScheduler>;
+final class ReminderLocalDsProvider
+    extends
+        $FunctionalProvider<
+          ReminderLocalDataSource,
+          ReminderLocalDataSource,
+          ReminderLocalDataSource
+        >
+    with $Provider<ReminderLocalDataSource> {
+  const ReminderLocalDsProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'reminderLocalDsProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$reminderLocalDsHash();
+
+  @$internal
+  @override
+  $ProviderElement<ReminderLocalDataSource> $createElement(
+    $ProviderPointer pointer,
+  ) => $ProviderElement(pointer);
+
+  @override
+  ReminderLocalDataSource create(Ref ref) {
+    return reminderLocalDs(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(ReminderLocalDataSource value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<ReminderLocalDataSource>(value),
+    );
+  }
+}
+
 String _$reminderLocalDsHash() => r'd3518eabc5396c44a547c632806126a9ebd64656';
 
-/// See also [reminderLocalDs].
-@ProviderFor(reminderLocalDs)
-final reminderLocalDsProvider =
-    AutoDisposeProvider<ReminderLocalDataSource>.internal(
-  reminderLocalDs,
-  name: r'reminderLocalDsProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$reminderLocalDsHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+@ProviderFor(reminderRepository)
+const reminderRepositoryProvider = ReminderRepositoryProvider._();
 
-typedef ReminderLocalDsRef = AutoDisposeProviderRef<ReminderLocalDataSource>;
+final class ReminderRepositoryProvider
+    extends
+        $FunctionalProvider<
+          ReminderRepository,
+          ReminderRepository,
+          ReminderRepository
+        >
+    with $Provider<ReminderRepository> {
+  const ReminderRepositoryProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'reminderRepositoryProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$reminderRepositoryHash();
+
+  @$internal
+  @override
+  $ProviderElement<ReminderRepository> $createElement(
+    $ProviderPointer pointer,
+  ) => $ProviderElement(pointer);
+
+  @override
+  ReminderRepository create(Ref ref) {
+    return reminderRepository(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(ReminderRepository value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<ReminderRepository>(value),
+    );
+  }
+}
+
 String _$reminderRepositoryHash() =>
     r'f7c2f6d0ca7867103bb84e7c60f312684beff5b6';
 
-/// See also [reminderRepository].
-@ProviderFor(reminderRepository)
-final reminderRepositoryProvider =
-    AutoDisposeProvider<ReminderRepository>.internal(
-  reminderRepository,
-  name: r'reminderRepositoryProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$reminderRepositoryHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+@ProviderFor(scheduleReminders)
+const scheduleRemindersProvider = ScheduleRemindersProvider._();
 
-typedef ReminderRepositoryRef = AutoDisposeProviderRef<ReminderRepository>;
+final class ScheduleRemindersProvider
+    extends
+        $FunctionalProvider<
+          ScheduleReminders,
+          ScheduleReminders,
+          ScheduleReminders
+        >
+    with $Provider<ScheduleReminders> {
+  const ScheduleRemindersProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'scheduleRemindersProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$scheduleRemindersHash();
+
+  @$internal
+  @override
+  $ProviderElement<ScheduleReminders> $createElement(
+    $ProviderPointer pointer,
+  ) => $ProviderElement(pointer);
+
+  @override
+  ScheduleReminders create(Ref ref) {
+    return scheduleReminders(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(ScheduleReminders value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<ScheduleReminders>(value),
+    );
+  }
+}
+
 String _$scheduleRemindersHash() => r'f945641623e66d66a951adc8dce796efbb62da30';
 
-/// See also [scheduleReminders].
-@ProviderFor(scheduleReminders)
-final scheduleRemindersProvider =
-    AutoDisposeProvider<ScheduleReminders>.internal(
-  scheduleReminders,
-  name: r'scheduleRemindersProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$scheduleRemindersHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+@ProviderFor(cancelReminders)
+const cancelRemindersProvider = CancelRemindersProvider._();
 
-typedef ScheduleRemindersRef = AutoDisposeProviderRef<ScheduleReminders>;
+final class CancelRemindersProvider
+    extends
+        $FunctionalProvider<CancelReminders, CancelReminders, CancelReminders>
+    with $Provider<CancelReminders> {
+  const CancelRemindersProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'cancelRemindersProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$cancelRemindersHash();
+
+  @$internal
+  @override
+  $ProviderElement<CancelReminders> $createElement($ProviderPointer pointer) =>
+      $ProviderElement(pointer);
+
+  @override
+  CancelReminders create(Ref ref) {
+    return cancelReminders(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(CancelReminders value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<CancelReminders>(value),
+    );
+  }
+}
+
 String _$cancelRemindersHash() => r'3107f0b2d66d30d5dacccf0513a3e5507142d059';
 
-/// See also [cancelReminders].
-@ProviderFor(cancelReminders)
-final cancelRemindersProvider = AutoDisposeProvider<CancelReminders>.internal(
-  cancelReminders,
-  name: r'cancelRemindersProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$cancelRemindersHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+@ProviderFor(rescheduleAll)
+const rescheduleAllProvider = RescheduleAllProvider._();
 
-typedef CancelRemindersRef = AutoDisposeProviderRef<CancelReminders>;
+final class RescheduleAllProvider
+    extends $FunctionalProvider<RescheduleAll, RescheduleAll, RescheduleAll>
+    with $Provider<RescheduleAll> {
+  const RescheduleAllProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'rescheduleAllProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$rescheduleAllHash();
+
+  @$internal
+  @override
+  $ProviderElement<RescheduleAll> $createElement($ProviderPointer pointer) =>
+      $ProviderElement(pointer);
+
+  @override
+  RescheduleAll create(Ref ref) {
+    return rescheduleAll(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(RescheduleAll value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<RescheduleAll>(value),
+    );
+  }
+}
+
 String _$rescheduleAllHash() => r'8678a97bee99bcb3082d60de0175703a7e309b69';
 
-/// See also [rescheduleAll].
-@ProviderFor(rescheduleAll)
-final rescheduleAllProvider = AutoDisposeProvider<RescheduleAll>.internal(
-  rescheduleAll,
-  name: r'rescheduleAllProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$rescheduleAllHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
-
-typedef RescheduleAllRef = AutoDisposeProviderRef<RescheduleAll>;
-String _$remindersForSubscriptionHash() =>
-    r'c013bf5ec6c53f856aec8a51136eed3b0b7963d1';
-
-/// Copied from Dart SDK
-class _SystemHash {
-  _SystemHash._();
-
-  static int combine(int hash, int value) {
-    // ignore: parameter_assignments
-    hash = 0x1fffffff & (hash + value);
-    // ignore: parameter_assignments
-    hash = 0x1fffffff & (hash + ((0x0007ffff & hash) << 10));
-    return hash ^ (hash >> 6);
-  }
-
-  static int finish(int hash) {
-    // ignore: parameter_assignments
-    hash = 0x1fffffff & (hash + ((0x03ffffff & hash) << 3));
-    // ignore: parameter_assignments
-    hash = hash ^ (hash >> 11);
-    return 0x1fffffff & (hash + ((0x00003fff & hash) << 15));
-  }
-}
-
-/// See also [remindersForSubscription].
 @ProviderFor(remindersForSubscription)
-const remindersForSubscriptionProvider = RemindersForSubscriptionFamily();
+const remindersForSubscriptionProvider = RemindersForSubscriptionFamily._();
 
-/// See also [remindersForSubscription].
-class RemindersForSubscriptionFamily
-    extends Family<AsyncValue<List<Reminder>>> {
-  /// See also [remindersForSubscription].
-  const RemindersForSubscriptionFamily();
+final class RemindersForSubscriptionProvider
+    extends
+        $FunctionalProvider<
+          AsyncValue<List<Reminder>>,
+          List<Reminder>,
+          FutureOr<List<Reminder>>
+        >
+    with $FutureModifier<List<Reminder>>, $FutureProvider<List<Reminder>> {
+  const RemindersForSubscriptionProvider._({
+    required RemindersForSubscriptionFamily super.from,
+    required int super.argument,
+  }) : super(
+         retry: null,
+         name: r'remindersForSubscriptionProvider',
+         isAutoDispose: true,
+         dependencies: null,
+         $allTransitiveDependencies: null,
+       );
 
-  /// See also [remindersForSubscription].
-  RemindersForSubscriptionProvider call(
-    int subscriptionId,
-  ) {
-    return RemindersForSubscriptionProvider(
-      subscriptionId,
-    );
+  @override
+  String debugGetCreateSourceHash() => _$remindersForSubscriptionHash();
+
+  @override
+  String toString() {
+    return r'remindersForSubscriptionProvider'
+        ''
+        '($argument)';
   }
 
+  @$internal
   @override
-  RemindersForSubscriptionProvider getProviderOverride(
-    covariant RemindersForSubscriptionProvider provider,
-  ) {
-    return call(
-      provider.subscriptionId,
-    );
-  }
-
-  static const Iterable<ProviderOrFamily>? _dependencies = null;
+  $FutureProviderElement<List<Reminder>> $createElement(
+    $ProviderPointer pointer,
+  ) => $FutureProviderElement(pointer);
 
   @override
-  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
-
-  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
-
-  @override
-  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
-      _allTransitiveDependencies;
-
-  @override
-  String? get name => r'remindersForSubscriptionProvider';
-}
-
-/// See also [remindersForSubscription].
-class RemindersForSubscriptionProvider
-    extends AutoDisposeFutureProvider<List<Reminder>> {
-  /// See also [remindersForSubscription].
-  RemindersForSubscriptionProvider(
-    int subscriptionId,
-  ) : this._internal(
-          (ref) => remindersForSubscription(
-            ref as RemindersForSubscriptionRef,
-            subscriptionId,
-          ),
-          from: remindersForSubscriptionProvider,
-          name: r'remindersForSubscriptionProvider',
-          debugGetCreateSourceHash:
-              const bool.fromEnvironment('dart.vm.product')
-                  ? null
-                  : _$remindersForSubscriptionHash,
-          dependencies: RemindersForSubscriptionFamily._dependencies,
-          allTransitiveDependencies:
-              RemindersForSubscriptionFamily._allTransitiveDependencies,
-          subscriptionId: subscriptionId,
-        );
-
-  RemindersForSubscriptionProvider._internal(
-    super._createNotifier, {
-    required super.name,
-    required super.dependencies,
-    required super.allTransitiveDependencies,
-    required super.debugGetCreateSourceHash,
-    required super.from,
-    required this.subscriptionId,
-  }) : super.internal();
-
-  final int subscriptionId;
-
-  @override
-  Override overrideWith(
-    FutureOr<List<Reminder>> Function(RemindersForSubscriptionRef provider)
-        create,
-  ) {
-    return ProviderOverride(
-      origin: this,
-      override: RemindersForSubscriptionProvider._internal(
-        (ref) => create(ref as RemindersForSubscriptionRef),
-        from: from,
-        name: null,
-        dependencies: null,
-        allTransitiveDependencies: null,
-        debugGetCreateSourceHash: null,
-        subscriptionId: subscriptionId,
-      ),
-    );
-  }
-
-  @override
-  AutoDisposeFutureProviderElement<List<Reminder>> createElement() {
-    return _RemindersForSubscriptionProviderElement(this);
+  FutureOr<List<Reminder>> create(Ref ref) {
+    final argument = this.argument as int;
+    return remindersForSubscription(ref, argument);
   }
 
   @override
   bool operator ==(Object other) {
     return other is RemindersForSubscriptionProvider &&
-        other.subscriptionId == subscriptionId;
+        other.argument == argument;
   }
 
   @override
   int get hashCode {
-    var hash = _SystemHash.combine(0, runtimeType.hashCode);
-    hash = _SystemHash.combine(hash, subscriptionId.hashCode);
-
-    return _SystemHash.finish(hash);
+    return argument.hashCode;
   }
 }
 
-mixin RemindersForSubscriptionRef
-    on AutoDisposeFutureProviderRef<List<Reminder>> {
-  /// The parameter `subscriptionId` of this provider.
-  int get subscriptionId;
-}
+String _$remindersForSubscriptionHash() =>
+    r'c013bf5ec6c53f856aec8a51136eed3b0b7963d1';
 
-class _RemindersForSubscriptionProviderElement
-    extends AutoDisposeFutureProviderElement<List<Reminder>>
-    with RemindersForSubscriptionRef {
-  _RemindersForSubscriptionProviderElement(super.provider);
+final class RemindersForSubscriptionFamily extends $Family
+    with $FunctionalFamilyOverride<FutureOr<List<Reminder>>, int> {
+  const RemindersForSubscriptionFamily._()
+    : super(
+        retry: null,
+        name: r'remindersForSubscriptionProvider',
+        dependencies: null,
+        $allTransitiveDependencies: null,
+        isAutoDispose: true,
+      );
+
+  RemindersForSubscriptionProvider call(int subscriptionId) =>
+      RemindersForSubscriptionProvider._(argument: subscriptionId, from: this);
 
   @override
-  int get subscriptionId =>
-      (origin as RemindersForSubscriptionProvider).subscriptionId;
+  String toString() => r'remindersForSubscriptionProvider';
+}
+
+@ProviderFor(ReminderNotifier)
+const reminderProvider = ReminderNotifierProvider._();
+
+final class ReminderNotifierProvider
+    extends $NotifierProvider<ReminderNotifier, AsyncValue<void>> {
+  const ReminderNotifierProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'reminderProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$reminderNotifierHash();
+
+  @$internal
+  @override
+  ReminderNotifier create() => ReminderNotifier();
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(AsyncValue<void> value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<AsyncValue<void>>(value),
+    );
+  }
 }
 
 String _$reminderNotifierHash() => r'cfcd65fd6e90dd2260f35f0f2040a968225db7fe';
 
-/// See also [ReminderNotifier].
-@ProviderFor(ReminderNotifier)
-final reminderNotifierProvider =
-    AutoDisposeNotifierProvider<ReminderNotifier, AsyncValue<void>>.internal(
-  ReminderNotifier.new,
-  name: r'reminderNotifierProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$reminderNotifierHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
-
-typedef _$ReminderNotifier = AutoDisposeNotifier<AsyncValue<void>>;
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+abstract class _$ReminderNotifier extends $Notifier<AsyncValue<void>> {
+  AsyncValue<void> build();
+  @$mustCallSuper
+  @override
+  void runBuild() {
+    final created = build();
+    final ref = this.ref as $Ref<AsyncValue<void>, AsyncValue<void>>;
+    final element =
+        ref.element
+            as $ClassProviderElement<
+              AnyNotifier<AsyncValue<void>, AsyncValue<void>>,
+              AsyncValue<void>,
+              Object?,
+              Object?
+            >;
+    element.handleValue(ref, created);
+  }
+}

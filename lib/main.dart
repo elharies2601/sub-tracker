@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:isar/isar.dart';
+import 'package:isar_community/isar.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:startapp_sdk/startapp.dart';
 import 'package:sub_tracker_v2/features/settings/data/models/app_settings_model.dart';
@@ -56,7 +56,7 @@ Future<void> main() async {
     overrides: [isarProvider.overrideWithValue(isar)],
   );
   // Await so onboardingCompleted is known before first frame
-  await container.read(appSettingsNotifierProvider.future);
+  await container.read(appSettingsProvider.future);
 
   // runApp(
   //   ProviderScope(
@@ -126,7 +126,7 @@ class _SubTrackerAppState extends ConsumerState<SubTrackerApp> {
       onStateChange: (state) {
         if (state == AppLifecycleState.paused ||
             state == AppLifecycleState.hidden) {
-          ref.read(appAuthNotifierProvider.notifier).lock();
+          ref.read(appAuthProvider.notifier).lock();
         }
       },
     );
@@ -158,7 +158,7 @@ class _SubTrackerAppState extends ConsumerState<SubTrackerApp> {
       themeMode: themeMode,
       routerConfig: router,
       builder: (context, child) {
-        final isLocked = ref.watch(appAuthNotifierProvider);
+        final isLocked = ref.watch(appAuthProvider);
         final onboardingDone = ref.watch(onboardingCompletedProvider);
 
         return Stack(

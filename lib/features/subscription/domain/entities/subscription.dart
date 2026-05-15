@@ -7,7 +7,7 @@ enum BillingCycle { weekly, monthly, yearly }
 enum SubscriptionStatus { active, paused, cancelled }
 
 @freezed
-class Subscription with _$Subscription {
+abstract class Subscription with _$Subscription {
   const Subscription._(); // enables custom methods
 
   const factory Subscription({
